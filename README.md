@@ -19,9 +19,9 @@ database, account system, or application backend.
 Laravel is not a good fit for this scope because there is no server-side
 business logic or database to justify maintaining a PHP application.
 
-## Planned routes
+## Public routes
 
-- `/` — product story, value proposition, features, privacy promise, and App
+- `/` — product story, 3D app preview, features, privacy promise, and App
   Store call to action
 - `/about` — why Tamoe exists and who created it
 - `/faq` — common product and privacy questions
@@ -29,6 +29,10 @@ business logic or database to justify maintaining a PHP application.
 - `/privacy` — privacy policy
 - `/terms` — terms of service, acceptance, intellectual property, limitations
   of liability, and copyright
+
+The landing page includes a scroll-linked 3D Tamoe phone reveal, depth-based
+cards, kinetic section reveals, cursor tilt, a scroll-progress indicator, and a
+reduced-motion fallback.
 
 ## Product source of truth
 
