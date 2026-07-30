@@ -13,8 +13,7 @@ database, account system, or application backend.
 - Static-first pages with no application API
 - Tailwind CSS plus Tamoe design tokens as CSS custom properties
 - Local, version-controlled content for product and legal pages
-- Cloudflare Sites for hosting; the source can be adapted to another static
-  host later if needed
+- Vercel for production hosting
 
 Laravel is not a good fit for this scope because there is no server-side
 business logic or database to justify maintaining a PHP application.

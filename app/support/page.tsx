@@ -32,8 +32,8 @@ export default function SupportPage() {
           <article className="support-card">
             <h2>Common questions</h2>
             <p>
-              Learn about local storage, event assignments, voice search, and
-              spreadsheet or PDF exports.
+              Learn about local storage, celebration assignments, voice
+              search, and spreadsheet or PDF exports.
             </p>
             <Link className="text-link" href="/faq">
               Browse the FAQ <span aria-hidden="true">→</span>
@@ -44,7 +44,7 @@ export default function SupportPage() {
             <ol className="steps-list">
               <li>Confirm that Tamoe and iOS are updated to the latest available versions.</li>
               <li>Close and reopen Tamoe, then try the action again.</li>
-              <li>For export issues, check that the selected events contain guests and that your device has available storage.</li>
+              <li>For export issues, check that the selected celebrations contain guests and that your device has available storage.</li>
               <li>Do not delete the app while troubleshooting; locally stored app data may be removed with it.</li>
             </ol>
           </article>

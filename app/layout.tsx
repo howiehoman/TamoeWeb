@@ -16,11 +16,11 @@ export async function generateMetadata(): Promise<Metadata> {
     (host.startsWith("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
   const description =
-    "Tamoe is a private, offline-first iPhone guest-list planner made for weddings with multiple events.";
+    "Tamoe is a private, offline-first iPhone app for planning every wedding guest across multiple celebrations.";
 
   return {
     title: {
-      default: "Tamoe — One guest list for every wedding moment",
+      default: "Tamoe — Every guest, thoughtfully planned",
       template: "%s | Tamoe",
     },
     description,
@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
       apple: "/tamoe-logo.png",
     },
     openGraph: {
-      title: "Tamoe — One guest list for every wedding moment",
+      title: "Tamoe — Every guest, thoughtfully planned",
       description,
       type: "website",
       images: [
@@ -43,7 +43,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Tamoe — One guest list for every wedding moment",
+      title: "Tamoe — Every guest, thoughtfully planned",
       description,
       images: [`${origin}/og.png`],
     },
@@ -116,7 +116,7 @@ function Footer() {
             />
             <span>Tamoe</span>
           </Link>
-          <p>A calmer way to care for every name on your wedding guest list.</p>
+          <p>Every name, celebration, and invitation decision in one calm guest list.</p>
         </div>
         <div className="footer-links">
           <div>

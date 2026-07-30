@@ -29,9 +29,10 @@ export default function TermsPage() {
         <section className="prose-section">
           <h2>2. What Tamoe provides</h2>
           <p>
-            Tamoe provides tools for organizing wedding guests, events,
-            capacity targets, and exports. Tamoe does not provide wedding,
-            venue, financial, legal, or event-management advice.
+            Tamoe provides tools for organizing wedding guests, celebrations,
+            household sizes, invitation statuses, capacity targets, and
+            exports. Tamoe does not provide wedding, venue, financial, legal,
+            or professional planning advice.
           </p>
         </section>
         <section className="prose-section">

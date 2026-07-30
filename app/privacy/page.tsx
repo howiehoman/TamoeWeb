@@ -31,9 +31,10 @@ export default function PrivacyPage() {
           <h2>Information in the Tamoe app</h2>
           <h3>Guest-list information</h3>
           <p>
-            Names, phone numbers, addresses, notes, event assignments,
-            categories, priorities, and pax counts that you enter are stored
-            locally on your device using Apple platform storage technologies.
+            Names, phone numbers, addresses, notes, celebration assignments,
+            categories, invitation statuses, and household sizes that you enter
+            are stored locally on your device using Apple platform storage
+            technologies.
           </p>
           <h3>Drafts and preferences</h3>
           <p>
@@ -84,7 +85,7 @@ export default function PrivacyPage() {
           <h2>Children&apos;s privacy</h2>
           <p>
             Tamoe is not directed to children and is intended for people
-            organizing wedding events.
+            organizing wedding celebrations.
           </p>
         </section>
         <section className="prose-section">

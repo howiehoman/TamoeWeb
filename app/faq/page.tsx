@@ -2,20 +2,22 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "FAQ",
-  description: "Answers about Tamoe guest lists, events, privacy, voice search, and exports.",
+  description: "Answers about Tamoe guest lists, celebrations, privacy, search, and exports.",
 };
 
 const questions = [
-  ["What is Tamoe?", "Tamoe is an iPhone guest-list planner made for weddings with multiple events. It helps you keep each guest once while managing different attendance details for every event."],
-  ["Can one guest attend several events?", "Yes. A guest may be included in any combination of your events, with separate category, priority, and number of pax for each one."],
-  ["How many events can I create?", "Tamoe is designed to support multiple wedding events. Practical limits may depend on your device, but the app does not impose a small fixed event allowance."],
+  ["What is Tamoe?", "Tamoe is a focused iPhone app for planning a wedding guest list across multiple celebrations. It brings names, contact details, household sizes, categories, invitation statuses, and notes into one calm place."],
+  ["Can one guest attend several celebrations?", "Yes. Add a guest once, then include them in any combination of your celebrations with the details that apply to each one."],
+  ["How do invitation statuses work?", "Use Must Invite, Maybe, and Optional to make decisions visible while your list is still taking shape. These are planning labels; Tamoe does not send invitations or collect responses."],
+  ["Can Tamoe help me stay within capacity?", "Yes. Each celebration can have a target, and Tamoe shows the planned guest total and whether the list is on track."],
+  ["How can I organize guests?", "Use categories such as Bride’s, Bride Parents, or Groom Parents, then search and filter the list to find the people you need."],
   ["Where is my guest information stored?", "The current version stores guest-list data locally on your device. There is no Tamoe account or cloud synchronization."],
   ["Does Tamoe track me?", "The reviewed app does not include advertising, analytics, or tracking. The website is also designed without marketing cookies or behavioral analytics."],
   ["Why does Tamoe request microphone access?", "Microphone and speech-recognition access are used for optional voice guest search. The reviewed app does not persist recordings or transcripts."],
-  ["Can I export my list?", "Yes. You can prepare selected events and categories as PDF, Excel, or Numbers-compatible spreadsheet files. Each selected event receives its own section or worksheet."],
-  ["Why does a guest appear more than once in an export?", "If a guest attends several selected events, they intentionally appear in each event section because their pax or other details may differ."],
+  ["Can I export my list?", "Yes. You can prepare selected celebrations and categories as PDF, Excel, or Numbers-compatible spreadsheet files. Each selected celebration receives its own section or worksheet."],
+  ["Why does a guest appear more than once in an export?", "If a guest attends several selected celebrations, they intentionally appear in each section so every list remains complete."],
   ["Can I move my data to a new iPhone?", "The current app does not provide account-based cloud sync. Device migration depends on the backup and transfer tools available on your iPhone."],
-  ["Does Tamoe collect RSVPs?", "No. Tamoe currently helps you plan and organize a guest list; it does not send invitations or collect RSVP responses."],
+  ["Does Tamoe collect invitation responses?", "No. Tamoe helps you plan and organize the guest list; it does not send invitations or collect responses."],
 ];
 
 export default function FaqPage() {
@@ -25,8 +27,8 @@ export default function FaqPage() {
         <p className="eyebrow">Frequently asked questions</p>
         <h1>A little clarity before the celebration.</h1>
         <p>
-          Everything you need to know about how Tamoe organizes events,
-          protects your guest list, and prepares exports.
+          Everything you need to know about how Tamoe organizes celebrations,
+          protects your guest list, and prepares it for sharing.
         </p>
       </section>
       <section className="content-body section-shell">

@@ -10,10 +10,11 @@ export default function AboutPage() {
     <main className="content-main">
       <section className="content-hero section-shell">
         <p className="eyebrow">About Tamoe</p>
-        <h1>A guest list shaped around real wedding days.</h1>
+        <h1>A calmer way to plan every name that matters.</h1>
         <p>
-          Tamoe began with a familiar problem: one wedding, several events, and
-          a guest list scattered across notes, chats, and spreadsheets.
+          Tamoe began with a familiar problem: a wedding with several
+          celebrations and one guest list scattered across notes, chats, and
+          spreadsheets.
         </p>
       </section>
       <section className="content-body wide section-shell">
@@ -21,26 +22,26 @@ export default function AboutPage() {
           <article className="about-card full-span">
             <h2>The idea</h2>
             <p>
-              Couples should not have to duplicate the people they love just
-              because attendance looks different at the Akad, Holy Matrimony,
-              reception, or another celebration. Tamoe keeps each person in one
-              place while respecting every event&apos;s details.
+              Add a person once, then choose the celebrations they attend.
+              Their contact details, household size, category, invitation
+              status, and notes stay connected instead of being copied between
+              separate lists.
             </p>
           </article>
           <article className="about-card">
             <h2>Focused, not crowded</h2>
             <p>
-              Tamoe concentrates on guest organization, capacity, and useful
-              exports. It is intentionally not another sprawling wedding
-              management system.
+              Tamoe keeps the target and current guest count visible while
+              categories and Must Invite, Maybe, or Optional statuses help
+              couples make thoughtful decisions.
             </p>
           </article>
           <article className="about-card">
             <h2>Calm by design</h2>
             <p>
               Warm surfaces, clear hierarchy, and familiar iPhone interactions
-              make the list feel approachable—even when the planning becomes
-              complex.
+              make searching, filtering, and editing the list feel
+              approachable—even when the planning becomes complex.
             </p>
           </article>
           <article className="about-card full-span">
