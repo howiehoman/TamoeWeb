@@ -30,7 +30,7 @@ export default function TermsPage() {
           <h2>2. What Tamoe provides</h2>
           <p>
             Tamoe provides tools for organizing wedding guests, celebrations,
-            household sizes, invitation statuses, capacity targets, and
+            Number of Pax values, Priority Levels, capacity targets, and
             exports. Tamoe does not provide wedding, venue, financial, legal,
             or professional planning advice.
           </p>

@@ -7,7 +7,7 @@ wedding with one or more celebrations. It is intentionally focused on guests,
 not general wedding project management.
 
 The central idea is simple: add a person once, then choose every celebration
-they will attend. Keep household size, category, invitation status, and notes
+they will attend. Keep Number of Pax, category, Priority Level, and notes
 connected to that guest so the list stays understandable as plans change.
 
 ## The story behind Tamoe
@@ -18,8 +18,8 @@ surrounding celebrations. Duplicate rows emerge, updates are missed, and the
 headcount becomes difficult to trust.
 
 Tamoe brings those moving parts into one calm, visual list. A couple can find
-Aunt Jane once, see the celebrations she attends, keep her household size and
-category clear, and mark the invitation decision as Must Invite, Maybe, or
+Aunt Jane once, see the celebrations she attends, keep her Number of Pax and
+category clear, and mark the Priority Level as Must Invite, Maybe, or
 Optional.
 
 The website should frame Tamoe as a thoughtful companion:
@@ -32,11 +32,11 @@ The website should frame Tamoe as a thoughtful companion:
 - Create multiple wedding celebrations and assign a target guest capacity.
 - Add a guest once and include them in one or more celebrations.
 - Store a guest name with optional phone number, address, and notes.
-- Set household size, category, and invitation status.
+- Set Number of Pax, category, and Priority Level.
 - Use Must Invite, Maybe, and Optional to make planning decisions visible.
 - View the total against the target and see an on-track or over-capacity state.
 - Search guests by text or speech.
-- Filter guests by celebration, category, or invitation status.
+- Filter guests by celebration, category, or Priority Level.
 - Use categories such as Bride's, Bride Parents, and Groom Parents.
 - Export selected celebrations and categories to PDF, Excel, or
   Numbers-compatible files.
@@ -63,7 +63,7 @@ embedded media, or cookies, the privacy policy must be updated.
 
 1. Every guest, thoughtfully planned.
 2. One guest record across every celebration they attend.
-3. Household size, category, and invitation status stay visible.
+3. Number of Pax, category, and Priority Level stay visible.
 4. The target headcount is always easy to understand.
 5. Private guest data remains on the iPhone.
 6. Download Tamoe from the App Store.

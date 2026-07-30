@@ -23,8 +23,8 @@ export default function AboutPage() {
             <h2>The idea</h2>
             <p>
               Add a person once, then choose the celebrations they attend.
-              Their contact details, household size, category, invitation
-              status, and notes stay connected instead of being copied between
+              Their contact details, Number of Pax, category, Priority Level,
+              and notes stay connected instead of being copied between
               separate lists.
             </p>
           </article>

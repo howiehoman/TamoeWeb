@@ -47,6 +47,7 @@ test("server-renders the Tamoe landing page and social metadata", async () => {
   assert.match(html, /thoughtfully planned/);
   assert.match(html, /Aunt Jane/);
   assert.match(html, /tamoe-app-preview\.png/);
+  assert.match(html, /Number of Pax/);
   assert.match(html, /Private by design/);
   assert.match(html, /https:\/\/tamoe\.example\/og\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);
@@ -80,6 +81,10 @@ test("removes starter UI and keeps motion accessible", async () => {
   ]);
 
   assert.match(page, /data-phone-flip/);
+  assert.ok(
+    page.indexOf("app-preview-brand") < page.indexOf("app-preview-screen"),
+    "the brand face should flip forward into the app preview",
+  );
   assert.match(page, /data-tilt/);
   assert.match(layout, /MotionEffects/);
   assert.match(layout, /openGraph/);

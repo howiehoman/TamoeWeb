@@ -32,7 +32,7 @@ export default function PrivacyPage() {
           <h3>Guest-list information</h3>
           <p>
             Names, phone numbers, addresses, notes, celebration assignments,
-            categories, invitation statuses, and household sizes that you enter
+            categories, Priority Levels, and Number of Pax values that you enter
             are stored locally on your device using Apple platform storage
             technologies.
           </p>

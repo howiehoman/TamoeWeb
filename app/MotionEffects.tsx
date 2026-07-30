@@ -45,6 +45,9 @@ export default function MotionEffects() {
     const tiltCards = Array.from(
       document.querySelectorAll<HTMLElement>("[data-tilt]"),
     );
+    const depthElements = Array.from(
+      document.querySelectorAll<HTMLElement>("[data-depth]"),
+    );
 
     let animationFrame = 0;
     const updateScroll = () => {
@@ -66,7 +69,18 @@ export default function MotionEffects() {
             "--phone-lift",
             `${Math.sin(eased * Math.PI) * -26}px`,
           );
+          phone.style.setProperty(
+            "--phone-roll",
+            `${2.5 - eased * 5}deg`,
+          );
           root.style.setProperty("--hero-card-opacity", `${flipProgress}`);
+          depthElements.forEach((element) => {
+            const depth = Number(element.dataset.depth ?? 1);
+            element.style.setProperty(
+              "--depth-scroll-y",
+              `${Math.sin(eased * Math.PI) * -24 * depth}px`,
+            );
+          });
         }
         animationFrame = 0;
       });
@@ -79,11 +93,24 @@ export default function MotionEffects() {
       const y = (event.clientY - bounds.top) / bounds.height - 0.5;
       heroScene.style.setProperty("--scene-rotate-y", `${x * 7}deg`);
       heroScene.style.setProperty("--scene-rotate-x", `${y * -5}deg`);
+      depthElements.forEach((element) => {
+        const depth = Number(element.dataset.depth ?? 1);
+        element.style.setProperty("--depth-pointer-x", `${x * 28 * depth}px`);
+        element.style.setProperty("--depth-pointer-y", `${y * 22 * depth}px`);
+        element.style.setProperty("--depth-rotate-x", `${y * -7 * depth}deg`);
+        element.style.setProperty("--depth-rotate-y", `${x * 9 * depth}deg`);
+      });
     };
 
     const resetHeroPointer = () => {
       heroScene?.style.setProperty("--scene-rotate-y", "0deg");
       heroScene?.style.setProperty("--scene-rotate-x", "0deg");
+      depthElements.forEach((element) => {
+        element.style.setProperty("--depth-pointer-x", "0px");
+        element.style.setProperty("--depth-pointer-y", "0px");
+        element.style.setProperty("--depth-rotate-x", "0deg");
+        element.style.setProperty("--depth-rotate-y", "0deg");
+      });
     };
 
     const tiltCleanups = tiltCards.map((card) => {

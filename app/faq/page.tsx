@@ -6,9 +6,9 @@ export const metadata: Metadata = {
 };
 
 const questions = [
-  ["What is Tamoe?", "Tamoe is a focused iPhone app for planning a wedding guest list across multiple celebrations. It brings names, contact details, household sizes, categories, invitation statuses, and notes into one calm place."],
+  ["What is Tamoe?", "Tamoe is a focused iPhone app for planning a wedding guest list across multiple celebrations. It brings names, contact details, Number of Pax, categories, Priority Levels, and notes into one calm place."],
   ["Can one guest attend several celebrations?", "Yes. Add a guest once, then include them in any combination of your celebrations with the details that apply to each one."],
-  ["How do invitation statuses work?", "Use Must Invite, Maybe, and Optional to make decisions visible while your list is still taking shape. These are planning labels; Tamoe does not send invitations or collect responses."],
+  ["How do Priority Levels work?", "Use Must Invite, Maybe, and Optional to make decisions visible while your list is still taking shape. These are planning labels; Tamoe does not send invitations or collect responses."],
   ["Can Tamoe help me stay within capacity?", "Yes. Each celebration can have a target, and Tamoe shows the planned guest total and whether the list is on track."],
   ["How can I organize guests?", "Use categories such as Bride’s, Bride Parents, or Groom Parents, then search and filter the list to find the people you need."],
   ["Where is my guest information stored?", "The current version stores guest-list data locally on your device. There is no Tamoe account or cloud synchronization."],

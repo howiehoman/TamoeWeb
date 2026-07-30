@@ -9,13 +9,13 @@ const features = [
   },
   {
     number: "02",
-    title: "A headcount that stays clear",
-    copy: "Set household size and see your invited total against the target for each celebration.",
+    title: "Number of Pax stays clear",
+    copy: "Set the Number of Pax and see your invited total against the target for each celebration.",
   },
   {
     number: "03",
-    title: "Decisions you can see",
-    copy: "Group guests by category and mark them Must Invite, Maybe, or Optional as your list takes shape.",
+    title: "Priority Levels you can see",
+    copy: "Group guests by category and set each Priority Level to Must Invite, Maybe, or Optional as your list takes shape.",
   },
   {
     number: "04",
@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Can one guest attend more than one celebration?",
     answer:
-      "Yes. Add a guest once, then include them in every celebration they will attend with the right category, invitation status, and household size.",
+      "Yes. Add a guest once, then include them in every celebration they will attend with the right category, Priority Level, and Number of Pax.",
   },
   {
     question: "Can I export my guest list?",
@@ -53,7 +53,7 @@ export default function Home() {
             <span>thoughtfully planned.</span>
           </h1>
           <p className="hero-lede">
-            Keep every name, celebration, household size, and invitation
+            Keep every name, celebration, Number of Pax, and priority
             decision in one calm place. Tamoe helps your guest list stay clear
             from the first draft to the final headcount.
           </p>
@@ -84,17 +84,7 @@ export default function Home() {
           <div className="soft-orbit orbit-two" />
           <div className="phone-stage app-preview-stage">
             <div className="phone-flip" data-phone-flip>
-              <div className="app-preview-face app-preview-front">
-                <Image
-                  src="/tamoe-app-preview.png"
-                  alt="Tamoe showing the Holy Matrimony guest list with search, categories, household sizes, and invitation statuses"
-                  width={456}
-                  height={904}
-                  priority
-                  unoptimized
-                />
-              </div>
-              <div className="app-preview-face app-preview-back">
+              <div className="app-preview-face app-preview-brand">
                 <div className="phone-front-shimmer" />
                 <Image
                   src="/tamoe-logo.png"
@@ -105,16 +95,31 @@ export default function Home() {
                 />
                 <strong>Tamoe</strong>
                 <span>Every guest. Every moment.</span>
+                <small>Scroll to enter the app</small>
+              </div>
+              <div className="app-preview-face app-preview-screen">
+                <Image
+                  src="/tamoe-app-preview.png"
+                  alt="Tamoe showing the Holy Matrimony guest list with search, categories, Number of Pax, and Priority Levels"
+                  width={456}
+                  height={904}
+                  priority
+                  unoptimized
+                />
               </div>
             </div>
           </div>
-          <div className="floating-note floating-note-top">
+          <div className="floating-note floating-note-top" data-depth="0.8">
             <span className="note-icon">✓</span>
-            <p><strong>On track</strong><small>30 of 200 guests planned</small></p>
+            <p><strong>On Track</strong><small>30 / 200 pax</small></p>
           </div>
-          <div className="floating-note floating-note-bottom">
-            <span className="note-icon privacy-icon">⌁</span>
-            <p><strong>Stored locally</strong><small>Your list stays on device</small></p>
+          <div className="floating-note floating-note-bottom" data-depth="-0.55">
+            <p><strong>Number of Pax</strong><small>One invitation, two people</small></p>
+            <span className="pax-stepper" aria-hidden="true"><i>−</i><b>2</b><i>+</i></span>
+          </div>
+          <div className="priority-float" data-depth="1.1" aria-hidden="true">
+            <span />
+            Must Invite
           </div>
         </div>
       </section>
@@ -147,8 +152,8 @@ export default function Home() {
             </p>
             <p>
               Tamoe replaces scattered notes and duplicate rows with one
-              thoughtful guest list—so categories, household sizes, and
-              invitation decisions stay easy to understand.
+              thoughtful guest list—so categories, Number of Pax, and Priority
+              Levels stay easy to understand.
             </p>
           </div>
         </div>
@@ -163,7 +168,7 @@ export default function Home() {
           </h2>
         </div>
         <div className="guest-journey">
-          <article className="person-card">
+          <article className="person-card" data-tilt>
             <div className="person-avatar">AJ</div>
             <div>
               <p className="mini-label">Your guest</p>
@@ -177,9 +182,9 @@ export default function Home() {
           <div className="event-cards">
             <article className="event-card" data-tilt>
               <p className="event-kicker"><span className="event-dot" /> Holy Matrimony</p>
-              <div><span>Household size</span><strong>2</strong></div>
+              <div><span>Number of Pax</span><strong>2 pax</strong></div>
               <div><span>Category</span><strong>Bride&apos;s</strong></div>
-              <div><span>Status</span><strong>Maybe</strong></div>
+              <div><span>Priority Level</span><strong>Maybe</strong></div>
             </article>
             <article className="event-card event-card-accent" data-tilt>
               <p className="event-kicker"><span className="event-dot" /> Reception</p>
@@ -220,7 +225,7 @@ export default function Home() {
       </section>
 
       <section className="privacy-section section-shell" id="privacy">
-        <div className="privacy-card">
+        <div className="privacy-card" data-tilt>
           <div className="privacy-mark" aria-hidden="true"><span>⌁</span></div>
           <div>
             <p className="eyebrow">Private by design</p>
