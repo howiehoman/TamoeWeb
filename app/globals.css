@@ -1467,15 +1467,14 @@ img {
 
 .app-tour-sticky {
   position: sticky;
-  top: 76px;
+  top: 84px;
   width: 100%;
   min-width: 0;
   max-width: 100vw;
-  height: calc(100svh - 76px);
+  height: calc(100svh - 84px);
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-block: 6px;
 }
 
 .app-tour-heading {
@@ -1502,17 +1501,17 @@ img {
 
 .app-screen-track {
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: 40px;
   width: max-content;
-  padding: 8px max(24px, calc((100vw - 1180px) / 2)) 24px;
+  padding-inline: max(24px, calc((100vw - 1180px) / 2));
   transform: translate3d(var(--app-tour-x, 0px), 0, 0);
   will-change: transform;
 }
 
 .app-screen-card {
-  width: clamp(280px, 21vw, 300px);
-  flex: 0 0 clamp(280px, 21vw, 300px);
+  width: clamp(240px, min(19vw, 31svh), 284px);
+  flex: 0 0 clamp(240px, min(19vw, 31svh), 284px);
   margin: 0;
   transform: perspective(1100px) rotateX(var(--tilt-x, 0deg))
     rotateY(var(--tilt-y, 0deg)) translateZ(var(--card-lift, 0px));
@@ -1527,8 +1526,8 @@ img {
 .app-screen-frame {
   position: relative;
   overflow: hidden;
-  border: 8px solid rgba(254, 253, 248, 0.9);
-  border-radius: 48px;
+  border: 6px solid rgba(254, 253, 248, 0.9);
+  border-radius: 56px;
   background: var(--canvas);
   box-shadow: 0 36px 90px rgba(0, 0, 0, 0.34);
   transform: rotateZ(-1.4deg) translateZ(24px);
@@ -1540,7 +1539,7 @@ img {
 }
 
 .app-screen-card:hover .app-screen-frame {
-  transform: translateY(-8px) rotateZ(0deg) translateZ(32px);
+  transform: translateY(-3px) rotateZ(0deg) translateZ(32px);
   box-shadow: 0 44px 110px rgba(0, 0, 0, 0.42);
 }
 
@@ -2363,9 +2362,8 @@ img {
   }
 
   .app-tour-sticky {
-    top: 68px;
-    height: calc(100svh - 68px);
-    padding-block: 6px;
+    top: 74px;
+    height: calc(100svh - 74px);
   }
 
   .app-tour-heading > p {
@@ -2411,8 +2409,12 @@ img {
   }
 
   .app-screen-card {
-    width: min(260px, 72vw);
-    flex-basis: min(260px, 72vw);
+    width: min(250px, 68vw, 30svh);
+    flex-basis: min(250px, 68vw, 30svh);
+  }
+
+  .app-screen-frame {
+    border-radius: 52px;
   }
 
   .app-screen-card figcaption {

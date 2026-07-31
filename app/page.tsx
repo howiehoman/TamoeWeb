@@ -404,7 +404,7 @@ export default function Home() {
                       alt={`${screen.title}. Actual Tamoe app screen.`}
                       width={1206}
                       height={2622}
-                      sizes="(max-width: 640px) 72vw, 300px"
+                      sizes="(max-width: 640px) 68vw, 284px"
                       unoptimized
                     />
                     <span className="screen-index">{String(index + 1).padStart(2, "0")}</span>
