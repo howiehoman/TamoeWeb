@@ -20,13 +20,13 @@ business logic or database to justify maintaining a PHP application.
 
 ## Public routes
 
-- `/` — product story, 3D app preview, features, privacy promise, and App
+- `/`: product story, 3D app preview, features, privacy promise, and App
   Store call to action
-- `/about` — why Tamoe exists and who created it
-- `/faq` — common product and privacy questions
-- `/support` — support email and troubleshooting guidance
-- `/privacy` — privacy policy
-- `/terms` — terms of service, acceptance, intellectual property, limitations
+- `/about`: why Tamoe exists and who created it
+- `/faq`: common product and privacy questions
+- `/support`: support email and troubleshooting guidance
+- `/privacy`: privacy policy
+- `/terms`: terms of service, acceptance, intellectual property, limitations
   of liability, and copyright
 
 The landing page includes a scroll-linked 3D Tamoe phone reveal, depth-based

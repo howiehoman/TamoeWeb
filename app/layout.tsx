@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: {
-      default: "Tamoe — Every guest, thoughtfully planned",
+      default: "Tamoe | Every guest, thoughtfully planned",
       template: "%s | Tamoe",
     },
     description,
@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
       apple: "/tamoe-logo.png",
     },
     openGraph: {
-      title: "Tamoe — Every guest, thoughtfully planned",
+      title: "Tamoe | Every guest, thoughtfully planned",
       description,
       type: "website",
       images: [
@@ -43,7 +43,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Tamoe — Every guest, thoughtfully planned",
+      title: "Tamoe | Every guest, thoughtfully planned",
       description,
       images: [`${origin}/og.png`],
     },

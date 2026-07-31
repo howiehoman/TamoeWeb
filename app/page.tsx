@@ -14,11 +14,21 @@ const features = [
   },
   {
     number: "03",
-    title: "Priority Levels you can see",
-    copy: "Group guests by category and set each Priority Level to Must Invite, Maybe, or Optional as your list takes shape.",
+    title: "Categories for every circle",
+    copy: "Organize guests as Bride, Groom, Bride Parents, Groom Parents, or any custom category your wedding needs.",
   },
   {
     number: "04",
+    title: "Priority Level makes decisions clearer",
+    copy: "Mark guests as Must Invite, Maybe, or Optional so you can decide who to invite when the list meets its limit.",
+  },
+  {
+    number: "05",
+    title: "Notes for one specific guest",
+    copy: "Keep dietary needs, accessibility details, family context, or reminders attached to the exact guest they concern.",
+  },
+  {
+    number: "06",
     title: "Find and share with ease",
     copy: "Search quickly, filter the list, and prepare PDF or spreadsheet exports when it is time to coordinate.",
   },
@@ -50,6 +60,51 @@ const teamMembers = [
   { name: "Ricky Tjahjono", initials: "RT" },
 ];
 
+const appScreens = [
+  {
+    src: "/app-screens/01-all-events.png",
+    label: "One shared list",
+    title: "See every guest across every celebration",
+    copy: "A single guest record shows every celebration they attend.",
+  },
+  {
+    src: "/app-screens/02-holy-matrimony.png",
+    label: "Real totals",
+    title: "Keep the quota and Number of Pax visible",
+    copy: "Tamoe calculates the live total from the guests in that celebration.",
+  },
+  {
+    src: "/app-screens/03-guest-details.png",
+    label: "Guest decisions",
+    title: "Set Category, Priority Level, and Number of Pax",
+    copy: "The details that shape each invitation stay together for every event.",
+  },
+  {
+    src: "/app-screens/04-category-priority-pax.png",
+    label: "Specific context",
+    title: "Keep notes with the guest they belong to",
+    copy: "Dietary needs, accessibility details, and reminders stay specific.",
+  },
+  {
+    src: "/app-screens/05-guest-notes.png",
+    label: "One person, full context",
+    title: "Review decisions and notes in one place",
+    copy: "Each guest has one clear record, even across several celebrations.",
+  },
+  {
+    src: "/app-screens/06-custom-category.png",
+    label: "Your wedding, your groups",
+    title: "Create the Categories your guest list needs",
+    copy: "Start with Bride, Groom, and parents, then add any group you want.",
+  },
+  {
+    src: "/app-screens/07-export-options.png",
+    label: "Ready for vendors",
+    title: "Choose exactly what to export and share",
+    copy: "Prepare PDF or spreadsheet files with the fields your vendors need.",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -61,9 +116,9 @@ export default function Home() {
             <span>thoughtfully planned.</span>
           </h1>
           <p className="hero-lede">
-            Keep every name, celebration, Number of Pax, and priority
-            decision in one calm place. Tamoe helps your guest list stay clear
-            from the first draft to the final headcount.
+            Keep every name, celebration, Number of Pax, Category, Priority
+            Level, and guest-specific note in one calm place. Tamoe keeps every
+            decision clear from the first draft to the final headcount.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#download">
@@ -160,8 +215,8 @@ export default function Home() {
             </p>
             <p>
               Tamoe replaces scattered notes and duplicate rows with one
-              thoughtful guest list—so categories, Number of Pax, and Priority
-              Levels stay easy to understand.
+              thoughtful guest list. Categories, Number of Pax, Priority
+              Levels, and guest-specific notes stay easy to understand.
             </p>
           </div>
         </div>
@@ -179,7 +234,8 @@ export default function Home() {
               Guest listing is one of the most emotionally difficult parts of
               planning a wedding, yet it is rarely talked about. Couples can
               find themselves caught between their own wishes, their parents,
-              and their future in-laws—each with people they want to include.
+              and their future in-laws. Each group has people they want to
+              include.
             </p>
             <p>
               Tamoe brings the conversation back to real data. Actual pax are
@@ -280,14 +336,16 @@ export default function Home() {
             <article className="event-card" data-tilt>
               <p className="event-kicker"><span className="event-dot" /> Holy Matrimony</p>
               <div><span>Number of Pax</span><strong>2 pax</strong></div>
-              <div><span>Category</span><strong>Bride&apos;s</strong></div>
+              <div><span>Category</span><strong>Bride Parents</strong></div>
               <div><span>Priority Level</span><strong>Maybe</strong></div>
+              <div><span>Notes</span><strong>Vegetarian meal</strong></div>
             </article>
             <article className="event-card event-card-accent" data-tilt>
               <p className="event-kicker"><span className="event-dot" /> Reception</p>
               <div><span>Guest</span><strong>Included</strong></div>
-              <div><span>Details</span><strong>Kept together</strong></div>
-              <div><span>Notes</span><strong>Ready when needed</strong></div>
+              <div><span>Category</span><strong>Family Friends</strong></div>
+              <div><span>Priority Level</span><strong>Must Invite</strong></div>
+              <div><span>Notes</span><strong>Specific to Aunt Jane</strong></div>
             </article>
           </div>
         </div>
@@ -305,8 +363,8 @@ export default function Home() {
             </div>
             <p>
               A focused set of tools for choosing who attends, keeping the
-              headcount visible, and finding any guest without turning wedding
-              planning into another complicated system.
+              headcount visible, recording the details that matter for each
+              person, and finding any guest without adding complexity.
             </p>
           </div>
           <div className="feature-grid">
@@ -318,6 +376,45 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="app-tour-section" id="app-preview">
+        <div className="section-shell app-tour-heading">
+          <div>
+            <p className="eyebrow">The real Tamoe app</p>
+            <h2 className="section-title">
+              Follow the guest list
+              <span>from decision to delivery.</span>
+            </h2>
+          </div>
+          <p>
+            Every screen below was captured directly from Tamoe running in iOS
+            Simulator with seeded demonstration guests. No generated app
+            imagery is used.
+          </p>
+        </div>
+        <div className="app-screen-track" aria-label="Tamoe app screenshots">
+          {appScreens.map((screen, index) => (
+            <figure className="app-screen-card" data-tilt key={screen.src}>
+              <div className="app-screen-frame">
+                <Image
+                  src={screen.src}
+                  alt={`${screen.title}. Actual Tamoe app screen.`}
+                  width={1206}
+                  height={2622}
+                  sizes="(max-width: 640px) 76vw, 330px"
+                  unoptimized
+                />
+                <span className="screen-index">{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <figcaption>
+                <span className="mini-label">{screen.label}</span>
+                <h3>{screen.title}</h3>
+                <p>{screen.copy}</p>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 

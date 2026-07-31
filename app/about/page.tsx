@@ -42,7 +42,7 @@ export default function AboutPage() {
             <p>
               Warm surfaces, clear hierarchy, and familiar iPhone interactions
               make searching, filtering, and editing the list feel
-              approachable—even when the planning becomes complex.
+              approachable, even when the planning becomes complex.
             </p>
           </article>
           <article className="about-card full-span">

@@ -13,7 +13,7 @@ export default function MotionEffects() {
 
     const revealTargets = Array.from(
       document.querySelectorAll<HTMLElement>(
-        ".section-intro, .story-grid > *, .purpose-copy > *, .shared-truth-card, .team-heading > *, .team-member, .guest-journey, .feature-card, .privacy-card > *, .faq-heading, .faq-list details, .download-card > *, .content-hero > *, .content-body > *, .support-card, .about-card",
+        ".section-intro, .story-grid > *, .purpose-copy > *, .shared-truth-card, .team-heading > *, .team-member, .guest-journey, .feature-card, .app-tour-heading > *, .app-screen-card, .privacy-card > *, .faq-heading, .faq-list details, .download-card > *, .content-hero > *, .content-body > *, .support-card, .about-card",
       ),
     );
 
@@ -64,7 +64,9 @@ export default function MotionEffects() {
             flipProgress < 0.5
               ? 2 * flipProgress * flipProgress
               : 1 - Math.pow(-2 * flipProgress + 2, 2) / 2;
-          phone.style.setProperty("--phone-flip", `${eased * 180}deg`);
+          const surfaceTurn =
+            eased <= 0.5 ? eased * 180 : (eased - 1) * 180;
+          phone.style.setProperty("--phone-flip", `${surfaceTurn}deg`);
           phone.style.setProperty(
             "--phone-lift",
             `${Math.sin(eased * Math.PI) * -26}px`,
@@ -73,15 +75,8 @@ export default function MotionEffects() {
             "--phone-roll",
             `${2.5 - eased * 5}deg`,
           );
-          const edgeFade = 0.09;
-          const brandOpacity =
-            eased < 0.5
-              ? Math.min(Math.max((0.5 - eased) / edgeFade, 0), 1)
-              : 0;
-          const screenOpacity =
-            eased > 0.5
-              ? Math.min(Math.max((eased - 0.5) / edgeFade, 0), 1)
-              : 0;
+          const brandOpacity = eased < 0.5 ? 1 : 0;
+          const screenOpacity = eased < 0.5 ? 0 : 1;
           phone.style.setProperty(
             "--brand-face-opacity",
             `${brandOpacity}`,

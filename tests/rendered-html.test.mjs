@@ -41,13 +41,20 @@ test("server-renders the Tamoe landing page and social metadata", async () => {
   const html = await response.text();
   assert.match(
     html,
-    /<title>Tamoe — Every guest, thoughtfully planned<\/title>/i,
+    /<title>Tamoe \| Every guest, thoughtfully planned<\/title>/i,
   );
   assert.match(html, /Every guest/);
   assert.match(html, /thoughtfully planned/);
   assert.match(html, /Aunt Jane/);
   assert.match(html, /tamoe-app-preview\.png/);
   assert.match(html, /Number of Pax/);
+  assert.match(html, /Categories for every circle/);
+  assert.match(html, /Priority Level makes decisions clearer/);
+  assert.match(html, /Notes for one specific guest/);
+  assert.match(html, /The real Tamoe app/);
+  assert.match(html, /01-all-events\.png/);
+  assert.match(html, /07-export-options\.png/);
+  assert.match(html, /No generated app imagery is used/);
   assert.match(html, /Howie Homan/);
   assert.match(html, /Ivana Grasielda/);
   assert.match(html, /Hansel Meinhard/);
@@ -99,6 +106,7 @@ test("removes starter UI and keeps motion accessible", async () => {
   assert.match(motion, /prefers-reduced-motion/);
   assert.match(motion, /--brand-face-opacity/);
   assert.match(motion, /--screen-face-opacity/);
+  assert.match(motion, /surfaceTurn/);
   assert.match(styles, /transform-style:\s*preserve-3d/);
   assert.match(styles, /-webkit-backface-visibility:\s*hidden/);
   assert.match(styles, /@media \(prefers-reduced-motion: reduce\)/);
