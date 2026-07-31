@@ -295,6 +295,7 @@ img {
   width: 315px;
   height: 632px;
   perspective: 1400px;
+  isolation: isolate;
 }
 
 .phone-flip {
@@ -303,7 +304,10 @@ img {
   height: 100%;
   transform: translateY(var(--phone-lift, 0px))
     rotateY(var(--phone-flip, 0deg)) rotateZ(var(--phone-roll, 2.5deg));
+  transform-origin: 50% 50%;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  isolation: isolate;
   will-change: transform;
 }
 
@@ -632,8 +636,13 @@ img {
   position: absolute;
   inset: 0;
   display: grid;
+  overflow: hidden;
   place-items: center;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  will-change: transform, opacity;
 }
 
 .app-preview-brand {
@@ -645,6 +654,8 @@ img {
     linear-gradient(145deg, #f5e8dc 0%, #c89d79 48%, #f8eee4 100%);
   color: var(--ink);
   box-shadow: 0 42px 90px rgba(73, 54, 11, 0.23);
+  opacity: var(--brand-face-opacity, 1);
+  transform: rotateY(0deg) translateZ(1px);
 }
 
 .app-preview-brand::before {
@@ -690,7 +701,8 @@ img {
 }
 
 .app-preview-screen {
-  transform: rotateY(180deg);
+  opacity: var(--screen-face-opacity, 0);
+  transform: rotateY(180deg) translateZ(1px);
 }
 
 .app-preview-screen img {
@@ -2190,6 +2202,8 @@ img {
   }
 
   .phone-flip {
+    --brand-face-opacity: 0;
+    --screen-face-opacity: 1;
     transform: rotateY(180deg);
   }
 

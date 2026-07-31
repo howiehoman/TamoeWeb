@@ -73,6 +73,23 @@ export default function MotionEffects() {
             "--phone-roll",
             `${2.5 - eased * 5}deg`,
           );
+          const edgeFade = 0.09;
+          const brandOpacity =
+            eased < 0.5
+              ? Math.min(Math.max((0.5 - eased) / edgeFade, 0), 1)
+              : 0;
+          const screenOpacity =
+            eased > 0.5
+              ? Math.min(Math.max((eased - 0.5) / edgeFade, 0), 1)
+              : 0;
+          phone.style.setProperty(
+            "--brand-face-opacity",
+            `${brandOpacity}`,
+          );
+          phone.style.setProperty(
+            "--screen-face-opacity",
+            `${screenOpacity}`,
+          );
           root.style.setProperty("--hero-card-opacity", `${flipProgress}`);
           depthElements.forEach((element) => {
             const depth = Number(element.dataset.depth ?? 1);

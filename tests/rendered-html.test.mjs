@@ -97,7 +97,10 @@ test("removes starter UI and keeps motion accessible", async () => {
   assert.match(layout, /MotionEffects/);
   assert.match(layout, /openGraph/);
   assert.match(motion, /prefers-reduced-motion/);
+  assert.match(motion, /--brand-face-opacity/);
+  assert.match(motion, /--screen-face-opacity/);
   assert.match(styles, /transform-style:\s*preserve-3d/);
+  assert.match(styles, /-webkit-backface-visibility:\s*hidden/);
   assert.match(styles, /@media \(prefers-reduced-motion: reduce\)/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 
