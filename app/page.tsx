@@ -374,47 +374,49 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="app-tour-section" id="app-preview" data-app-tour>
-        <div className="app-tour-sticky">
-          <div className="section-shell app-tour-heading">
-            <div>
-              <p className="eyebrow">Inside the Tamoe app</p>
-              <h2 className="section-title">
-                Follow the guest list
-                <span>from decision to delivery.</span>
-              </h2>
-            </div>
-            <p>
-              Every screen below was captured directly from Tamoe running in
-              iOS Simulator with seeded demonstration guests. No generated app
-              imagery is used.
-            </p>
+      <section className="app-tour-section" id="app-preview">
+        <div className="section-shell app-tour-heading">
+          <div>
+            <p className="eyebrow">Inside the Tamoe app</p>
+            <h2 className="section-title">
+              Follow the guest list
+              <span>from decision to delivery.</span>
+            </h2>
           </div>
-          <div
-            className="app-screen-track"
-            data-app-screen-track
-            aria-label="Tamoe app screenshots"
-          >
-            {appScreens.map((screen, index) => (
-              <figure className="app-screen-card" data-tilt key={screen.src}>
-                <div className="app-screen-frame">
-                  <Image
-                    src={screen.src}
-                    alt={`${screen.title}. Actual Tamoe app screen.`}
-                    width={1206}
-                    height={2622}
-                    sizes="(max-width: 640px) 76vw, 330px"
-                    unoptimized
-                  />
-                  <span className="screen-index">{String(index + 1).padStart(2, "0")}</span>
-                </div>
-                <figcaption>
-                  <span className="mini-label">{screen.label}</span>
-                  <h3>{screen.title}</h3>
-                  <p>{screen.copy}</p>
-                </figcaption>
-              </figure>
-            ))}
+          <p>
+            Every screen below was captured directly from Tamoe running in
+            iOS Simulator with seeded demonstration guests. No generated app
+            imagery is used.
+          </p>
+        </div>
+        <div className="app-tour-scroll-region" data-app-tour>
+          <div className="app-tour-sticky">
+            <div
+              className="app-screen-track"
+              data-app-screen-track
+              aria-label="Tamoe app screenshots"
+            >
+              {appScreens.map((screen, index) => (
+                <figure className="app-screen-card" data-tilt key={screen.src}>
+                  <div className="app-screen-frame">
+                    <Image
+                      src={screen.src}
+                      alt={`${screen.title}. Actual Tamoe app screen.`}
+                      width={1206}
+                      height={2622}
+                      sizes="(max-width: 640px) 72vw, 300px"
+                      unoptimized
+                    />
+                    <span className="screen-index">{String(index + 1).padStart(2, "0")}</span>
+                  </div>
+                  <figcaption>
+                    <span className="mini-label">{screen.label}</span>
+                    <h3>{screen.title}</h3>
+                    <p>{screen.copy}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </section>

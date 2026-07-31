@@ -1451,13 +1451,18 @@ img {
 }
 
 .app-tour-section {
-  height: 620vh;
   overflow: clip;
-  padding: 0;
+  padding: 112px 0 84px;
   background:
     radial-gradient(circle at 80% 8%, rgba(190, 145, 106, 0.24), transparent 30%),
     var(--ink);
   color: var(--canvas);
+}
+
+.app-tour-scroll-region {
+  position: relative;
+  height: 620vh;
+  margin-top: 72px;
 }
 
 .app-tour-sticky {
@@ -1467,11 +1472,10 @@ img {
   min-width: 0;
   max-width: 100vw;
   height: calc(100svh - 76px);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: auto minmax(0, 1fr);
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  padding-block: clamp(22px, 3vh, 34px) 18px;
+  padding-block: 6px;
 }
 
 .app-tour-heading {
@@ -1482,7 +1486,7 @@ img {
 }
 
 .app-tour-heading .section-title {
-  font-size: clamp(38px, 3.5vw, 50px);
+  font-size: clamp(46px, 5vw, 68px);
 }
 
 .app-tour-heading .eyebrow {
@@ -1499,17 +1503,16 @@ img {
 .app-screen-track {
   display: flex;
   align-items: start;
-  gap: 30px;
+  gap: 40px;
   width: max-content;
-  margin-top: clamp(16px, 2.4vh, 28px);
-  padding: 8px max(24px, calc((100vw - 1180px) / 2)) 12px;
+  padding: 8px max(24px, calc((100vw - 1180px) / 2)) 24px;
   transform: translate3d(var(--app-tour-x, 0px), 0, 0);
   will-change: transform;
 }
 
 .app-screen-card {
-  width: clamp(176px, 14vw, 188px);
-  flex: 0 0 clamp(176px, 14vw, 188px);
+  width: clamp(280px, 21vw, 300px);
+  flex: 0 0 clamp(280px, 21vw, 300px);
   margin: 0;
   transform: perspective(1100px) rotateX(var(--tilt-x, 0deg))
     rotateY(var(--tilt-y, 0deg)) translateZ(var(--card-lift, 0px));
@@ -1533,7 +1536,7 @@ img {
 }
 
 .app-screen-card:nth-child(even) .app-screen-frame {
-  transform: translateY(26px) rotateZ(1.4deg) translateZ(24px);
+  transform: rotateZ(1.4deg) translateZ(24px);
 }
 
 .app-screen-card:hover .app-screen-frame {
@@ -1564,7 +1567,7 @@ img {
 }
 
 .app-screen-card figcaption {
-  padding: 22px 8px 0;
+  padding: 24px 10px 0;
 }
 
 .app-screen-card figcaption .mini-label {
@@ -1572,16 +1575,16 @@ img {
 }
 
 .app-screen-card figcaption h3 {
-  margin: 8px 0 9px;
+  margin: 8px 0 10px;
   color: var(--canvas);
-  font: 500 20px/1.24 var(--serif);
+  font: 500 24px/1.22 var(--serif);
 }
 
 .app-screen-card figcaption p {
   margin: 0;
   color: rgba(254, 253, 248, 0.64);
   font-family: var(--sans);
-  font-size: 12.5px;
+  font-size: 13px;
   line-height: 1.7;
 }
 
@@ -2351,14 +2354,18 @@ img {
   }
 
   .app-tour-section {
+    padding: 80px 0 64px;
+  }
+
+  .app-tour-scroll-region {
     height: 650vh;
-    padding: 0;
+    margin-top: 46px;
   }
 
   .app-tour-sticky {
     top: 68px;
     height: calc(100svh - 68px);
-    padding-block: 18px 14px;
+    padding-block: 6px;
   }
 
   .app-tour-heading > p {
@@ -2400,21 +2407,20 @@ img {
   }
 
   .app-screen-track {
-    gap: 22px;
-    margin-top: 18px;
+    gap: 26px;
   }
 
   .app-screen-card {
-    width: min(200px, 50vw);
-    flex-basis: min(200px, 50vw);
+    width: min(260px, 72vw);
+    flex-basis: min(260px, 72vw);
   }
 
   .app-screen-card figcaption {
-    padding-top: 16px;
+    padding-top: 20px;
   }
 
   .app-screen-card figcaption h3 {
-    font-size: 19px;
+    font-size: 22px;
   }
 
   .app-screen-card figcaption p {
@@ -2546,6 +2552,11 @@ img {
   .app-tour-section {
     height: auto;
     padding-block: 80px;
+  }
+
+  .app-tour-scroll-region {
+    height: auto;
+    margin-top: 52px;
   }
 
   .app-tour-sticky {
