@@ -48,6 +48,14 @@ test("server-renders the Tamoe landing page and social metadata", async () => {
   assert.match(html, /Aunt Jane/);
   assert.match(html, /tamoe-app-preview\.png/);
   assert.match(html, /Number of Pax/);
+  assert.match(html, /Howie Homan/);
+  assert.match(html, /Ivana Grasielda/);
+  assert.match(html, /Hansel Meinhard/);
+  assert.match(html, /Nicole Wahyudi/);
+  assert.match(html, /Ricky Tjahjono/);
+  assert.match(html, /146/);
+  assert.match(html, /Excel/);
+  assert.match(html, /Numbers/);
   assert.match(html, /Private by design/);
   assert.match(html, /https:\/\/tamoe\.example\/og\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);

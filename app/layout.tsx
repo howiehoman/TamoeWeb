@@ -52,6 +52,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const navLinks = [
   { href: "/#story", label: "Story" },
+  { href: "/#team", label: "Team" },
   { href: "/#features", label: "Features" },
   { href: "/#privacy", label: "Privacy" },
   { href: "/faq", label: "FAQ" },
@@ -122,6 +123,7 @@ function Footer() {
           <div>
             <strong>Explore</strong>
             <Link href="/#story">Our story</Link>
+            <Link href="/#team">Team</Link>
             <Link href="/#features">Features</Link>
             <Link href="/faq">FAQ</Link>
           </div>

@@ -22,18 +22,19 @@ export default function AboutPage() {
           <article className="about-card full-span">
             <h2>The idea</h2>
             <p>
-              Add a person once, then choose the celebrations they attend.
-              Their contact details, Number of Pax, category, Priority Level,
-              and notes stay connected instead of being copied between
-              separate lists.
+              Guest-list decisions can create tension between couples, parents,
+              and future in-laws because every person brings meaningful
+              relationships and expectations to the table. Tamoe makes the real
+              guest total and quota visible, giving everyone a clearer basis
+              for conversation and shared ownership.
             </p>
           </article>
           <article className="about-card">
             <h2>Focused, not crowded</h2>
             <p>
-              Tamoe keeps the target and current guest count visible while
-              categories and Must Invite, Maybe, or Optional statuses help
-              couples make thoughtful decisions.
+              Add a person once, then keep their Number of Pax, category,
+              Priority Level, celebrations, and notes connected. Export the
+              organized result to Excel, PDF, or Numbers for wedding vendors.
             </p>
           </article>
           <article className="about-card">
@@ -45,11 +46,13 @@ export default function AboutPage() {
             </p>
           </article>
           <article className="about-card full-span">
-            <h2>Created at Apple Developer Academy</h2>
+            <h2>The team behind Tamoe</h2>
             <p>
-              Tamoe is being developed as an iOS product with care for native
-              interaction, accessibility, and privacy. Team details will be
-              added here before the public App Store release.
+              Created at Apple Developer Academy by Howie Homan, Ivana
+              Grasielda, Hansel Meinhard, Nicole Wahyudi, and Ricky Tjahjono.
+              Together, we are building Tamoe with care for native interaction,
+              accessibility, privacy, and the real relationships behind every
+              guest-list decision.
             </p>
           </article>
         </div>

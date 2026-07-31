@@ -17,10 +17,19 @@ works until the same names need to appear across a ceremony, reception, and
 surrounding celebrations. Duplicate rows emerge, updates are missed, and the
 headcount becomes difficult to trust.
 
+The deeper problem is relational. Couples can face conflict with one another,
+their parents, and future in-laws when each person has different expectations
+about who should be included. Tamoe shows the real pax total beside the agreed
+quota so the people involved can review the same facts, understand trade-offs,
+and take ownership of the decision.
+
 Tamoe brings those moving parts into one calm, visual list. A couple can find
 Aunt Jane once, see the celebrations she attends, keep her Number of Pax and
 category clear, and mark the Priority Level as Must Invite, Maybe, or
 Optional.
+
+Exports also bridge the couple and wedding vendors. The organized guest list
+can be shared as Excel, PDF, or Numbers files for practical coordination.
 
 The website should frame Tamoe as a thoughtful companion:
 
@@ -116,3 +125,8 @@ Required routes:
 Before App Store release, confirm the support email, legal entity, governing
 jurisdiction, final effective dates, and App Store URL. Legal copy requires
 professional review.
+
+## Team
+
+Tamoe is created at Apple Developer Academy by Howie Homan, Ivana Grasielda,
+Hansel Meinhard, Nicole Wahyudi, and Ricky Tjahjono.

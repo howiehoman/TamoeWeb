@@ -42,6 +42,14 @@ const faqs = [
   },
 ];
 
+const teamMembers = [
+  { name: "Howie Homan", initials: "HH" },
+  { name: "Ivana Grasielda", initials: "IG" },
+  { name: "Hansel Meinhard", initials: "HM" },
+  { name: "Nicole Wahyudi", initials: "NW" },
+  { name: "Ricky Tjahjono", initials: "RT" },
+];
+
 export default function Home() {
   return (
     <main>
@@ -156,6 +164,95 @@ export default function Home() {
               Levels stay easy to understand.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="team-story-section section-shell" id="team">
+        <div className="purpose-grid">
+          <div className="purpose-copy">
+            <p className="eyebrow">Why we built Tamoe</p>
+            <h2 className="section-title">
+              A guest list is never
+              <span>just a list.</span>
+            </h2>
+            <p className="purpose-lede">
+              Guest listing is one of the most emotionally difficult parts of
+              planning a wedding, yet it is rarely talked about. Couples can
+              find themselves caught between their own wishes, their parents,
+              and their future in-laws—each with people they want to include.
+            </p>
+            <p>
+              Tamoe brings the conversation back to real data. Actual pax are
+              shown beside the agreed quota, so everyone can see what is
+              possible, understand the trade-offs, and take ownership of the
+              decisions instead of arguing from separate lists.
+            </p>
+            <p>
+              The same organized data also bridges the couple and their wedding
+              vendors. Export the guest list to Excel, PDF, or Numbers, then
+              share a clear working document with the people handling the venue,
+              catering, invitations, and the wedding day.
+            </p>
+          </div>
+
+          <article className="shared-truth-card" data-tilt>
+            <div className="truth-card-heading">
+              <div>
+                <span className="mini-label">One shared source of truth</span>
+                <h3>Holy Matrimony</h3>
+              </div>
+              <span className="truth-status"><i /> On Track</span>
+            </div>
+            <div className="truth-quota">
+              <div>
+                <span>Real guest total</span>
+                <strong>146 <small>/ 200 pax</small></strong>
+              </div>
+              <span>54 pax available</span>
+            </div>
+            <div className="truth-progress" aria-label="146 of 200 pax">
+              <span />
+            </div>
+            <div className="ownership-row">
+              <span>Couple</span>
+              <i>+</i>
+              <span>Parents</span>
+              <i>+</i>
+              <span>In-laws</span>
+            </div>
+            <div className="vendor-bridge">
+              <div>
+                <span className="mini-label">Ready for vendors</span>
+                <strong>Export one clear guest list</strong>
+              </div>
+              <div className="export-formats" aria-label="Export formats">
+                <span>Excel</span>
+                <span>PDF</span>
+                <span>Numbers</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div className="team-heading">
+          <p className="eyebrow">The team behind Tamoe</p>
+          <h2>Five perspectives. One thoughtful product.</h2>
+          <p>
+            Built at Apple Developer Academy by a team who wanted to make a
+            sensitive wedding conversation clearer, fairer, and easier to act
+            on.
+          </p>
+        </div>
+        <div className="team-grid">
+          {teamMembers.map((member, index) => (
+            <article className="team-member" data-tilt key={member.name}>
+              <span className={`team-avatar team-avatar-${index + 1}`}>
+                {member.initials}
+              </span>
+              <h3>{member.name}</h3>
+              <p>Tamoe Team</p>
+            </article>
+          ))}
         </div>
       </section>
 
