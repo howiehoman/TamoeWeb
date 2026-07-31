@@ -37,7 +37,7 @@ const features = [
 
 const faqs = [
   {
-    question: "Does Tamoe upload my guest list?",
+    question: "Does TAMOE upload my guest list?",
     answer:
       "No. The current app keeps your guest-list data on your iPhone and does not require an account or cloud sync.",
   },
@@ -49,7 +49,7 @@ const faqs = [
   {
     question: "Can I export my guest list?",
     answer:
-      "Yes. Tamoe can prepare selected lists as PDF or spreadsheet files, including formats compatible with Excel and Numbers.",
+      "Yes. TAMOE can prepare selected lists as PDF or spreadsheet files, including formats compatible with Excel and Numbers.",
   },
 ];
 
@@ -72,7 +72,7 @@ const appScreens = [
     src: "/app-screens/02-holy-matrimony.png",
     label: "Calculated totals",
     title: "Keep the quota and Number of Pax visible",
-    copy: "Tamoe calculates the live total from the guests in that celebration.",
+    copy: "TAMOE calculates the live total from the guests in that celebration.",
   },
   {
     src: "/app-screens/03-guest-details.png",
@@ -118,7 +118,7 @@ export default function Home() {
           </h1>
           <p className="hero-lede">
             Keep every name, celebration, Number of Pax, Category, Priority
-            Level, and guest-specific note in one clear place. Tamoe keeps every
+            Level, and guest-specific note in one clear place. TAMOE keeps every
             decision clear from the first draft to the final headcount.
           </p>
           <div className="hero-actions">
@@ -127,7 +127,7 @@ export default function Home() {
               Coming soon on the App Store
             </a>
             <a className="text-link" href="#how-it-works">
-              See how Tamoe works <span aria-hidden="true">↘</span>
+              See how TAMOE works <span aria-hidden="true">↘</span>
             </a>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function Home() {
         <div
           className="hero-visual"
           data-hero-scene
-          aria-label="An interactive preview of the Tamoe iPhone app"
+          aria-label="An interactive preview of the TAMOE iPhone app"
         >
           <div className="soft-orbit orbit-one" />
           <div className="soft-orbit orbit-two" />
@@ -150,14 +150,14 @@ export default function Home() {
                   height={188}
                   unoptimized
                 />
-                <strong>Tamoe</strong>
+                <strong>TAMOE</strong>
                 <span>Every guest. Every moment.</span>
                 <small>Scroll to enter the app</small>
               </div>
               <div className="app-preview-face app-preview-screen">
                 <Image
                   src="/tamoe-app-preview.png"
-                  alt="Tamoe showing the Holy Matrimony guest list with search, categories, Number of Pax, and Priority Levels"
+                  alt="TAMOE showing the Holy Matrimony guest list with search, categories, Number of Pax, and Priority Levels"
                   width={456}
                   height={904}
                   priority
@@ -196,7 +196,7 @@ export default function Home() {
       <section className="story-section" id="story">
         <div className="section-shell story-grid">
           <div>
-            <p className="eyebrow">Why Tamoe exists</p>
+            <p className="eyebrow">Why TAMOE exists</p>
             <h2 className="section-title">
               Wedding lists get complicated.
               <span>The people never should.</span>
@@ -209,7 +209,7 @@ export default function Home() {
               of guests, while the same names keep returning.
             </p>
             <p>
-              Tamoe replaces scattered notes and duplicate rows with one
+              TAMOE replaces scattered notes and duplicate rows with one
               thoughtful guest list. Categories, Number of Pax, Priority
               Levels, and guest-specific notes stay easy to understand.
             </p>
@@ -220,7 +220,7 @@ export default function Home() {
       <section className="team-story-section section-shell" id="team">
         <div className="purpose-grid">
           <div className="purpose-copy">
-            <p className="eyebrow">Why we built Tamoe</p>
+            <p className="eyebrow">Why we built TAMOE</p>
             <h2 className="section-title">
               A guest list is never
               <span>just a list.</span>
@@ -233,7 +233,7 @@ export default function Home() {
               include.
             </p>
             <p>
-              Tamoe brings the conversation back to shared data. The Number of
+              TAMOE brings the conversation back to shared data. The Number of
               Pax is shown beside the agreed quota, so everyone can see what is
               possible, understand the trade-offs, and take ownership of each
               decision instead of arguing from separate lists.
@@ -286,7 +286,7 @@ export default function Home() {
         </div>
 
         <div className="team-heading">
-          <p className="eyebrow">The team behind Tamoe</p>
+          <p className="eyebrow">The team behind TAMOE</p>
           <h2>Five perspectives. One thoughtful product.</h2>
           <p>
             Built at Apple Developer Academy by a team who wanted to make a
@@ -301,7 +301,7 @@ export default function Home() {
                 {member.initials}
               </span>
               <h3>{member.name}</h3>
-              <p>Tamoe Team</p>
+              <p>TAMOE Team</p>
             </article>
           ))}
         </div>
@@ -309,7 +309,7 @@ export default function Home() {
 
       <section className="how-section section-shell" id="how-it-works">
         <div className="section-intro">
-          <p className="eyebrow">The Tamoe difference</p>
+          <p className="eyebrow">The TAMOE difference</p>
           <h2 className="section-title">
             Add each person once.
             <span>Plan every moment with care.</span>
@@ -377,14 +377,14 @@ export default function Home() {
       <section className="app-tour-section" id="app-preview">
         <div className="section-shell app-tour-heading">
           <div>
-            <p className="eyebrow">Inside the Tamoe app</p>
+            <p className="eyebrow">Inside the TAMOE app</p>
             <h2 className="section-title">
               Follow the guest list
               <span>from decision to delivery.</span>
             </h2>
           </div>
           <p>
-            Every screen below was captured directly from Tamoe running in
+            Every screen below was captured directly from TAMOE running in
             iOS Simulator with seeded demonstration guests. No generated app
             imagery is used.
           </p>
@@ -394,17 +394,17 @@ export default function Home() {
             <div
               className="app-screen-track"
               data-app-screen-track
-              aria-label="Tamoe app screenshots"
+              aria-label="TAMOE app screenshots"
             >
               {appScreens.map((screen, index) => (
                 <figure className="app-screen-card" data-tilt key={screen.src}>
                   <div className="app-screen-frame">
                     <Image
                       src={screen.src}
-                      alt={`${screen.title}. Actual Tamoe app screen.`}
+                      alt={`${screen.title}. Actual TAMOE app screen.`}
                       width={1206}
                       height={2622}
-                      sizes="(max-width: 640px) 68vw, 284px"
+                      sizes="(max-width: 640px) 66vw, 276px"
                       unoptimized
                     />
                     <span className="screen-index">{String(index + 1).padStart(2, "0")}</span>
@@ -431,7 +431,7 @@ export default function Home() {
               <span>with you.</span>
             </h2>
             <p>
-              Tamoe keeps names, phone numbers, addresses, notes, and planning
+              TAMOE keeps names, phone numbers, addresses, notes, and planning
               details locally on your device. No account, no advertising
               profile, and no tracking.
             </p>
@@ -472,7 +472,7 @@ export default function Home() {
         <div className="feedback-copy">
           <p className="eyebrow">Share your thoughts</p>
           <h2 className="section-title">
-            Help us make Tamoe
+            Help us make TAMOE
             <span>more useful for every couple.</span>
           </h2>
           <p>
@@ -487,7 +487,7 @@ export default function Home() {
         <div className="download-card">
           <div className="download-wordmark">
             <Image src="/tamoe-logo.png" alt="" width={68} height={68} unoptimized />
-            <span>Tamoe</span>
+            <span>TAMOE</span>
           </div>
           <p className="eyebrow">Coming soon to the App Store</p>
           <h2>
@@ -495,7 +495,7 @@ export default function Home() {
             <span>who matters.</span>
           </h2>
           <p>
-            Let Tamoe care for the guest list, so you can stay present for the
+            Let TAMOE care for the guest list, so you can stay present for the
             people and moments that make your wedding meaningful.
           </p>
           <button className="button button-light" type="button" disabled>

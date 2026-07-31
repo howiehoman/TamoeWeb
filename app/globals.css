@@ -12,6 +12,8 @@
   --line: rgba(73, 54, 11, 0.14);
   --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino,
     "Times New Roman", serif;
+  --brand-serif: ui-serif, "New York", "New York Small", "New York Large",
+    "Iowan Old Style", Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
     "Helvetica Neue", Arial, sans-serif;
   --shadow: 0 30px 90px rgba(73, 54, 11, 0.12);
@@ -111,8 +113,8 @@ img {
   align-items: center;
   gap: 10px;
   width: fit-content;
-  font: 600 28px/1 var(--serif);
-  letter-spacing: -0.03em;
+  font: 600 27px/1 var(--brand-serif);
+  letter-spacing: 0.045em;
 }
 
 .brand img {
@@ -686,8 +688,8 @@ img {
 .app-preview-brand strong {
   position: relative;
   margin-top: 24px;
-  font: 600 42px/1 var(--serif);
-  letter-spacing: -0.04em;
+  font: 600 40px/1 var(--brand-serif);
+  letter-spacing: 0.055em;
 }
 
 .app-preview-brand > span:not(.phone-front-shimmer) {
@@ -1452,7 +1454,7 @@ img {
 
 .app-tour-section {
   overflow: clip;
-  padding: 112px 0 84px;
+  padding: 112px 0 120px;
   background:
     radial-gradient(circle at 80% 8%, rgba(190, 145, 106, 0.24), transparent 30%),
     var(--ink);
@@ -1475,6 +1477,7 @@ img {
   display: flex;
   align-items: center;
   overflow: hidden;
+  padding-block: 12px;
 }
 
 .app-tour-heading {
@@ -1510,8 +1513,13 @@ img {
 }
 
 .app-screen-card {
-  width: clamp(240px, min(19vw, 31svh), 284px);
-  flex: 0 0 clamp(240px, min(19vw, 31svh), 284px);
+  --app-screen-card-width: clamp(
+    136px,
+    min(18vw, calc((100svh - 310px) * 0.46)),
+    276px
+  );
+  width: var(--app-screen-card-width);
+  flex: 0 0 var(--app-screen-card-width);
   margin: 0;
   transform: perspective(1100px) rotateX(var(--tilt-x, 0deg))
     rotateY(var(--tilt-y, 0deg)) translateZ(var(--card-lift, 0px));
@@ -1585,6 +1593,45 @@ img {
   font-family: var(--sans);
   font-size: 13px;
   line-height: 1.7;
+}
+
+@media (min-width: 641px) and (max-height: 820px) {
+  .app-screen-track {
+    gap: 32px;
+  }
+
+  .app-screen-frame {
+    border-width: 5px;
+    border-radius: 48px;
+  }
+
+  .screen-index {
+    right: 14px;
+    bottom: 14px;
+    width: 38px;
+    height: 38px;
+    font-size: 10px;
+  }
+
+  .app-screen-card figcaption {
+    padding: 15px 7px 0;
+  }
+
+  .app-screen-card figcaption .mini-label {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+  }
+
+  .app-screen-card figcaption h3 {
+    margin: 6px 0 7px;
+    font-size: 20px;
+    line-height: 1.16;
+  }
+
+  .app-screen-card figcaption p {
+    font-size: 12px;
+    line-height: 1.45;
+  }
 }
 
 .motion-ready .reveal {
@@ -1896,7 +1943,8 @@ img {
   align-items: center;
   gap: 9px;
   margin-bottom: 42px;
-  font: 600 27px/1 var(--serif);
+  font: 600 26px/1 var(--brand-serif);
+  letter-spacing: 0.045em;
 }
 
 .download-wordmark img {
@@ -2353,7 +2401,7 @@ img {
   }
 
   .app-tour-section {
-    padding: 80px 0 64px;
+    padding: 80px 0 88px;
   }
 
   .app-tour-scroll-region {
@@ -2409,8 +2457,11 @@ img {
   }
 
   .app-screen-card {
-    width: min(250px, 68vw, 30svh);
-    flex-basis: min(250px, 68vw, 30svh);
+    --app-screen-card-width: clamp(
+      136px,
+      min(238px, 66vw, calc((100svh - 280px) * 0.46)),
+      238px
+    );
   }
 
   .app-screen-frame {
@@ -2528,6 +2579,49 @@ img {
 
   .content-body {
     padding-block: 58px 84px;
+  }
+}
+
+@media (max-width: 640px) and (max-height: 720px) {
+  .app-screen-card {
+    --app-screen-card-width: clamp(
+      128px,
+      min(210px, 62vw, calc((100svh - 300px) * 0.42)),
+      210px
+    );
+  }
+
+  .app-screen-frame {
+    border-width: 4px;
+    border-radius: 40px;
+  }
+
+  .screen-index {
+    right: 11px;
+    bottom: 11px;
+    width: 34px;
+    height: 34px;
+    font-size: 9px;
+  }
+
+  .app-screen-card figcaption {
+    padding: 12px 5px 0;
+  }
+
+  .app-screen-card figcaption .mini-label {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .app-screen-card figcaption h3 {
+    margin: 5px 0 6px;
+    font-size: 18px;
+    line-height: 1.12;
+  }
+
+  .app-screen-card figcaption p {
+    font-size: 11px;
+    line-height: 1.35;
   }
 }
 

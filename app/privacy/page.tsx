@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Tamoe handles app and website information.",
+  description: "How TAMOE handles app and website information.",
 };
 
 export default function PrivacyPage() {
@@ -17,18 +17,18 @@ export default function PrivacyPage() {
         <div className="draft-notice">
           Pre-release draft: this policy reflects the app and website currently
           under development. The final release must be reviewed against the
-          submitted App Store build and confirmed by the Tamoe team.
+          submitted App Store build and confirmed by the TAMOE team.
         </div>
         <section className="prose-section">
           <h2>Overview</h2>
           <p>
-            Tamoe is designed as a local-first wedding guest-list application.
+            TAMOE is designed as a local-first wedding guest-list application.
             The current app does not require an account and does not operate a
             server that receives your guest-list records.
           </p>
         </section>
         <section className="prose-section">
-          <h2>Information in the Tamoe app</h2>
+          <h2>Information in the TAMOE app</h2>
           <h3>Guest-list information</h3>
           <p>
             Names, phone numbers, addresses, notes, celebration assignments,
@@ -38,12 +38,12 @@ export default function PrivacyPage() {
           </p>
           <h3>Drafts and preferences</h3>
           <p>
-            Tamoe may store unfinished form drafts and preferences locally so
+            TAMOE may store unfinished form drafts and preferences locally so
             that your work can be restored and the app can behave as expected.
           </p>
           <h3>Voice guest search</h3>
           <p>
-            If you choose voice search, Tamoe requests microphone and speech
+            If you choose voice search, TAMOE requests microphone and speech
             recognition access to convert speech into a search query. The
             reviewed app does not persist audio recordings or transcripts.
             Apple&apos;s speech services may process speech according to
@@ -68,8 +68,8 @@ export default function PrivacyPage() {
         <section className="prose-section">
           <h2>Sharing and selling information</h2>
           <p>
-            Tamoe does not sell guest-list information. Because the reviewed
-            app stores guest data locally, Tamoe does not receive that data to
+            TAMOE does not sell guest-list information. Because the reviewed
+            app stores guest data locally, TAMOE does not receive that data to
             share with advertisers or data brokers.
           </p>
         </section>
@@ -77,21 +77,21 @@ export default function PrivacyPage() {
           <h2>Data control and deletion</h2>
           <p>
             You can edit or delete guest records inside the app. Removing the
-            app may remove its local data. Before deleting Tamoe, export any
+            app may remove its local data. Before deleting TAMOE, export any
             information you want to retain.
           </p>
         </section>
         <section className="prose-section">
           <h2>Children&apos;s privacy</h2>
           <p>
-            Tamoe is not directed to children and is intended for people
+            TAMOE is not directed to children and is intended for people
             organizing wedding celebrations.
           </p>
         </section>
         <section className="prose-section">
           <h2>Policy changes and contact</h2>
           <p>
-            We may update this policy when Tamoe&apos;s features or practices
+            We may update this policy when TAMOE&apos;s features or practices
             change. Material changes will appear on this page with a new
             effective date. Questions can be sent to{" "}
             <a href="mailto:support@tamoe.app">support@tamoe.app</a>.

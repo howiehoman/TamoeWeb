@@ -3,17 +3,17 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Support",
-  description: "Get help with Tamoe and learn what to include in a support request.",
+  description: "Get help with TAMOE and learn what to include in a support request.",
 };
 
 export default function SupportPage() {
   return (
     <main className="content-main">
       <section className="content-hero section-shell">
-        <p className="eyebrow">Tamoe support</p>
+        <p className="eyebrow">TAMOE support</p>
         <h1>We&apos;re here to help you keep planning.</h1>
         <p>
-          Find quick guidance below or email the Tamoe team. Please avoid
+          Find quick guidance below or email the TAMOE team. Please avoid
           including private guest information in your support message.
         </p>
       </section>
@@ -23,7 +23,7 @@ export default function SupportPage() {
             <h2>Email support</h2>
             <p>
               Tell us what happened, which iPhone and iOS version you use, and
-              the Tamoe version shown in Settings.
+              the TAMOE version shown in Settings.
             </p>
             <a className="button button-primary" href="mailto:support@tamoe.app">
               support@tamoe.app
@@ -42,8 +42,8 @@ export default function SupportPage() {
           <article className="support-card full-span">
             <h2>Before you contact us</h2>
             <ol className="steps-list">
-              <li>Confirm that Tamoe and iOS are updated to the latest available versions.</li>
-              <li>Close and reopen Tamoe, then try the action again.</li>
+              <li>Confirm that TAMOE and iOS are updated to the latest available versions.</li>
+              <li>Close and reopen TAMOE, then try the action again.</li>
               <li>For export issues, check that the selected celebrations contain guests and that your device has available storage.</li>
               <li>Do not delete the app while troubleshooting; locally stored app data may be removed with it.</li>
             </ol>

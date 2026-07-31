@@ -26,7 +26,7 @@ export default function FeedbackForm() {
 
     setIsReady(true);
     window.location.href = `mailto:${supportEmail}?subject=${encodeURIComponent(
-      "Tamoe website feedback",
+      "TAMOE website feedback",
     )}&body=${encodeURIComponent(body)}`;
   };
 
@@ -48,7 +48,7 @@ export default function FeedbackForm() {
           name="message"
           rows={6}
           required
-          placeholder="Tell us what you would like Tamoe to improve..."
+          placeholder="Tell us what you would like TAMOE to improve..."
         />
       </label>
       <div className="feedback-submit">

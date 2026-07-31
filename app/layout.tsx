@@ -16,12 +16,12 @@ export async function generateMetadata(): Promise<Metadata> {
     (host.startsWith("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
   const description =
-    "Tamoe is a private, offline-first iPhone app for planning every wedding guest across multiple celebrations.";
+    "TAMOE is a private, offline-first iPhone app for planning every wedding guest across multiple celebrations.";
 
   return {
     title: {
-      default: "Tamoe | Every guest, thoughtfully planned",
-      template: "%s | Tamoe",
+      default: "TAMOE | Every guest, thoughtfully planned",
+      template: "%s | TAMOE",
     },
     description,
     icons: {
@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
       apple: "/tamoe-logo.png",
     },
     openGraph: {
-      title: "Tamoe | Every guest, thoughtfully planned",
+      title: "TAMOE | Every guest, thoughtfully planned",
       description,
       type: "website",
       images: [
@@ -37,13 +37,13 @@ export async function generateMetadata(): Promise<Metadata> {
           url: `${origin}/og.png`,
           width: 1200,
           height: 630,
-          alt: "Tamoe wedding guest-list planner",
+          alt: "TAMOE wedding guest-list planner",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Tamoe | Every guest, thoughtfully planned",
+      title: "TAMOE | Every guest, thoughtfully planned",
       description,
       images: [`${origin}/og.png`],
     },
@@ -63,7 +63,7 @@ function Header() {
   return (
     <header className="site-header">
       <div className="nav-shell">
-        <Link className="brand" href="/" aria-label="Tamoe home">
+        <Link className="brand" href="/" aria-label="TAMOE home">
           <Image
             src="/tamoe-logo.png"
             alt=""
@@ -71,7 +71,7 @@ function Header() {
             height={72}
             unoptimized
           />
-          <span>Tamoe</span>
+          <span>TAMOE</span>
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navLinks.map((link) => (
@@ -81,7 +81,7 @@ function Header() {
           ))}
         </nav>
         <Link className="nav-cta" href="/#download">
-          Get Tamoe
+          Get TAMOE
         </Link>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">
@@ -94,7 +94,7 @@ function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link href="/#download">Get Tamoe</Link>
+            <Link href="/#download">Get TAMOE</Link>
           </nav>
         </details>
       </div>
@@ -115,7 +115,7 @@ function Footer() {
               height={72}
               unoptimized
             />
-            <span>Tamoe</span>
+            <span>TAMOE</span>
           </Link>
           <p>Every name, celebration, and invitation decision in one shared guest list.</p>
         </div>
@@ -141,7 +141,7 @@ function Footer() {
         </div>
       </div>
       <div className="section-shell footer-bottom">
-        <span>© 2026 Tamoe. All rights reserved.</span>
+        <span>© 2026 TAMOE. All rights reserved.</span>
         <span>Designed with care for wedding days.</span>
       </div>
     </footer>

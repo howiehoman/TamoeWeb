@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Why Tamoe was created and the wedding-planning problem it solves.",
+  description: "Why TAMOE was created and the wedding-planning problem it solves.",
 };
 
 export default function AboutPage() {
   return (
     <main className="content-main">
       <section className="content-hero section-shell">
-        <p className="eyebrow">About Tamoe</p>
+        <p className="eyebrow">About TAMOE</p>
         <h1>A clearer way to plan every name that matters.</h1>
         <p>
-          Tamoe began with a familiar problem: a wedding with several
+          TAMOE began with a familiar problem: a wedding with several
           celebrations and one guest list scattered across notes, chats, and
           spreadsheets.
         </p>
@@ -24,7 +24,7 @@ export default function AboutPage() {
             <p>
               Guest-list decisions can create tension between couples, parents,
               and future in-laws because every person brings meaningful
-              relationships and expectations to the table. Tamoe makes the
+              relationships and expectations to the table. TAMOE makes the
               guest total and quota visible, giving everyone a clearer basis
               for conversation and shared ownership.
             </p>
@@ -46,11 +46,11 @@ export default function AboutPage() {
             </p>
           </article>
           <article className="about-card full-span">
-            <h2>The team behind Tamoe</h2>
+            <h2>The team behind TAMOE</h2>
             <p>
               Created at Apple Developer Academy by Howie Homan, Ivana
               Grasielda, Hansel Meinhard, Nicole Wahyudi, and Ricky Tjahjono.
-              Together, we are building Tamoe with care for native interaction,
+              Together, we are building TAMOE with care for native interaction,
               accessibility, privacy, and the relationships behind every
               guest-list decision.
             </p>
