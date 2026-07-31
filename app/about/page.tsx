@@ -10,7 +10,7 @@ export default function AboutPage() {
     <main className="content-main">
       <section className="content-hero section-shell">
         <p className="eyebrow">About Tamoe</p>
-        <h1>A calmer way to plan every name that matters.</h1>
+        <h1>A clearer way to plan every name that matters.</h1>
         <p>
           Tamoe began with a familiar problem: a wedding with several
           celebrations and one guest list scattered across notes, chats, and
@@ -24,7 +24,7 @@ export default function AboutPage() {
             <p>
               Guest-list decisions can create tension between couples, parents,
               and future in-laws because every person brings meaningful
-              relationships and expectations to the table. Tamoe makes the real
+              relationships and expectations to the table. Tamoe makes the
               guest total and quota visible, giving everyone a clearer basis
               for conversation and shared ownership.
             </p>
@@ -38,7 +38,7 @@ export default function AboutPage() {
             </p>
           </article>
           <article className="about-card">
-            <h2>Calm by design</h2>
+            <h2>Clear by design</h2>
             <p>
               Warm surfaces, clear hierarchy, and familiar iPhone interactions
               make searching, filtering, and editing the list feel
@@ -51,7 +51,7 @@ export default function AboutPage() {
               Created at Apple Developer Academy by Howie Homan, Ivana
               Grasielda, Hansel Meinhard, Nicole Wahyudi, and Ricky Tjahjono.
               Together, we are building Tamoe with care for native interaction,
-              accessibility, privacy, and the real relationships behind every
+              accessibility, privacy, and the relationships behind every
               guest-list decision.
             </p>
           </article>

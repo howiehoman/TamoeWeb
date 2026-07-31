@@ -19,11 +19,11 @@ headcount becomes difficult to trust.
 
 The deeper problem is relational. Couples can face conflict with one another,
 their parents, and future in-laws when each person has different expectations
-about who should be included. Tamoe shows the real pax total beside the agreed
+about who should be included. Tamoe shows the guest total beside the agreed
 quota so the people involved can review the same facts, understand trade-offs,
 and take ownership of the decision.
 
-Tamoe brings those moving parts into one calm, visual list. A couple can find
+Tamoe brings those moving parts into one clear, visual list. A couple can find
 Aunt Jane once, see the celebrations she attends, keep her Number of Pax and
 category clear, and mark the Priority Level as Must Invite, Maybe, or
 Optional.
@@ -82,7 +82,7 @@ response collection; these are not current Tamoe features.
 
 ## Design direction
 
-Tamoe should feel warm, calm, editorial, and native to the Apple ecosystem.
+Tamoe should feel warm, considered, editorial, and native to the Apple ecosystem.
 The website can be expressive while staying faithful to the app.
 
 | Token | Value | Use |
@@ -104,7 +104,7 @@ The website can be expressive while staying faithful to the app.
 
 Required routes:
 
-- Home: product promise, real iPhone preview, story, workflow, features,
+- Home: product promise, iPhone preview, story, workflow, features,
   privacy, FAQ preview, and App Store call to action
 - About: product motivation and team context
 - FAQ: capabilities, local storage, search, exports, and device migration

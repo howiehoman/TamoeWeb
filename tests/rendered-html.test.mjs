@@ -51,7 +51,7 @@ test("server-renders the Tamoe landing page and social metadata", async () => {
   assert.match(html, /Categories for every circle/);
   assert.match(html, /Priority Level makes decisions clearer/);
   assert.match(html, /Notes for one specific guest/);
-  assert.match(html, /The real Tamoe app/);
+  assert.match(html, /Inside the Tamoe app/);
   assert.match(html, /01-all-events\.png/);
   assert.match(html, /07-export-options\.png/);
   assert.match(html, /No generated app imagery is used/);
@@ -64,6 +64,12 @@ test("server-renders the Tamoe landing page and social metadata", async () => {
   assert.match(html, /Excel/);
   assert.match(html, /Numbers/);
   assert.match(html, /Private by design/);
+  assert.match(html, /Help us make Tamoe/);
+  assert.match(html, /support@tamoe\.app/);
+  assert.match(html, /data-app-tour/);
+  assert.doesNotMatch(html, /\breal\b/i);
+  assert.doesNotMatch(html, /\bcalm\w*\b/i);
+  assert.doesNotMatch(html, /Made for iPhone|No account needed/);
   assert.match(html, /https:\/\/tamoe\.example\/og\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);
 });
@@ -107,8 +113,12 @@ test("removes starter UI and keeps motion accessible", async () => {
   assert.match(motion, /--brand-face-opacity/);
   assert.match(motion, /--screen-face-opacity/);
   assert.match(motion, /surfaceTurn/);
+  assert.match(motion, /--app-tour-x/);
+  assert.match(motion, /tourProgress/);
   assert.match(styles, /transform-style:\s*preserve-3d/);
   assert.match(styles, /-webkit-backface-visibility:\s*hidden/);
+  assert.match(styles, /\.app-tour-sticky/);
+  assert.match(styles, /var\(--app-tour-x/);
   assert.match(styles, /@media \(prefers-reduced-motion: reduce\)/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 

@@ -13,7 +13,7 @@ export default function MotionEffects() {
 
     const revealTargets = Array.from(
       document.querySelectorAll<HTMLElement>(
-        ".section-intro, .story-grid > *, .purpose-copy > *, .shared-truth-card, .team-heading > *, .team-member, .guest-journey, .feature-card, .app-tour-heading > *, .app-screen-card, .privacy-card > *, .faq-heading, .faq-list details, .download-card > *, .content-hero > *, .content-body > *, .support-card, .about-card",
+        ".section-intro, .story-grid > *, .purpose-copy > *, .shared-truth-card, .team-heading > *, .team-member, .guest-journey, .feature-card, .app-tour-heading > *, .app-screen-card, .privacy-card > *, .faq-heading, .faq-list details, .feedback-copy > *, .feedback-form, .download-card > *, .content-hero > *, .content-body > *, .support-card, .about-card",
       ),
     );
 
@@ -42,6 +42,10 @@ export default function MotionEffects() {
 
     const phone = document.querySelector<HTMLElement>("[data-phone-flip]");
     const heroScene = document.querySelector<HTMLElement>("[data-hero-scene]");
+    const appTour = document.querySelector<HTMLElement>("[data-app-tour]");
+    const appScreenTrack = document.querySelector<HTMLElement>(
+      "[data-app-screen-track]",
+    );
     const tiltCards = Array.from(
       document.querySelectorAll<HTMLElement>("[data-tilt]"),
     );
@@ -57,6 +61,35 @@ export default function MotionEffects() {
           document.documentElement.scrollHeight - window.innerHeight;
         const pageProgress = pageMax > 0 ? window.scrollY / pageMax : 0;
         root.style.setProperty("--scroll-progress", `${pageProgress * 100}%`);
+
+        if (appTour && appScreenTrack && !prefersReducedMotion.matches) {
+          const tourBounds = appTour.getBoundingClientRect();
+          const scrollDistance = Math.max(
+            appTour.offsetHeight - window.innerHeight,
+            1,
+          );
+          const tourProgress = Math.min(
+            Math.max(-tourBounds.top / scrollDistance, 0),
+            1,
+          );
+          const firstCard = appScreenTrack.firstElementChild as HTMLElement | null;
+          const lastCard = appScreenTrack.lastElementChild as HTMLElement | null;
+          const startX = firstCard?.offsetLeft ?? 0;
+          const endX = lastCard
+            ? lastCard.offsetLeft + lastCard.offsetWidth
+            : appScreenTrack.scrollWidth;
+          const visibleWidth = window.innerWidth;
+          const travel = Math.max(endX - visibleWidth + startX, 0);
+
+          appScreenTrack.style.setProperty(
+            "--app-tour-x",
+            `${-tourProgress * travel}px`,
+          );
+          appTour.style.setProperty(
+            "--app-tour-progress",
+            `${tourProgress * 100}%`,
+          );
+        }
 
         if (phone && !prefersReducedMotion.matches) {
           const flipProgress = Math.min(Math.max(window.scrollY / 500, 0), 1);
@@ -149,6 +182,7 @@ export default function MotionEffects() {
     });
 
     window.addEventListener("scroll", updateScroll, { passive: true });
+    window.addEventListener("resize", updateScroll);
     heroScene?.addEventListener("pointermove", handleHeroPointer);
     heroScene?.addEventListener("pointerleave", resetHeroPointer);
     updateScroll();
@@ -156,6 +190,7 @@ export default function MotionEffects() {
     return () => {
       root.classList.remove("motion-ready");
       window.removeEventListener("scroll", updateScroll);
+      window.removeEventListener("resize", updateScroll);
       heroScene?.removeEventListener("pointermove", handleHeroPointer);
       heroScene?.removeEventListener("pointerleave", resetHeroPointer);
       tiltCleanups.forEach((cleanup) => cleanup());

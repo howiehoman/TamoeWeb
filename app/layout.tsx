@@ -117,7 +117,7 @@ function Footer() {
             />
             <span>Tamoe</span>
           </Link>
-          <p>Every name, celebration, and invitation decision in one calm guest list.</p>
+          <p>Every name, celebration, and invitation decision in one shared guest list.</p>
         </div>
         <div className="footer-links">
           <div>

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 const questions = [
-  ["What is Tamoe?", "Tamoe is a focused iPhone app for planning a wedding guest list across multiple celebrations. It brings names, contact details, Number of Pax, categories, Priority Levels, and notes into one calm place."],
+  ["What is Tamoe?", "Tamoe is a focused iPhone app for planning a wedding guest list across multiple celebrations. It brings names, contact details, Number of Pax, categories, Priority Levels, and notes into one clear place."],
   ["Can one guest attend several celebrations?", "Yes. Add a guest once, then include them in any combination of your celebrations with the details that apply to each one."],
   ["How do Priority Levels work?", "Use Must Invite, Maybe, and Optional to decide who to invite when your guest list meets its limit. These planning labels make each decision visible; Tamoe does not send invitations or collect responses."],
   ["Can Tamoe help me stay within capacity?", "Yes. Each celebration can have a target, and Tamoe shows the planned guest total and whether the list is on track."],

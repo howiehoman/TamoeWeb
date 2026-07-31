@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import FeedbackForm from "./FeedbackForm";
 
 const features = [
   {
@@ -69,7 +70,7 @@ const appScreens = [
   },
   {
     src: "/app-screens/02-holy-matrimony.png",
-    label: "Real totals",
+    label: "Calculated totals",
     title: "Keep the quota and Number of Pax visible",
     copy: "Tamoe calculates the live total from the guests in that celebration.",
   },
@@ -117,7 +118,7 @@ export default function Home() {
           </h1>
           <p className="hero-lede">
             Keep every name, celebration, Number of Pax, Category, Priority
-            Level, and guest-specific note in one calm place. Tamoe keeps every
+            Level, and guest-specific note in one clear place. Tamoe keeps every
             decision clear from the first draft to the final headcount.
           </p>
           <div className="hero-actions">
@@ -128,13 +129,6 @@ export default function Home() {
             <a className="text-link" href="#how-it-works">
               See how Tamoe works <span aria-hidden="true">↘</span>
             </a>
-          </div>
-          <div className="hero-proof" aria-label="Tamoe product qualities">
-            <span>Private by design</span>
-            <span aria-hidden="true">•</span>
-            <span>Made for iPhone</span>
-            <span aria-hidden="true">•</span>
-            <span>No account needed</span>
           </div>
         </div>
 
@@ -188,13 +182,14 @@ export default function Home() {
       </section>
 
       <div className="marquee" aria-hidden="true">
-        <div>
-          <span>ONE GUEST</span><i>✦</i>
-          <span>EVERY CELEBRATION</span><i>✦</i>
-          <span>ONE CALM LIST</span><i>✦</i>
-          <span>ONE GUEST</span><i>✦</i>
-          <span>EVERY CELEBRATION</span><i>✦</i>
-          <span>ONE CALM LIST</span><i>✦</i>
+        <div className="marquee-track">
+          {[0, 1].map((group) => (
+            <div className="marquee-group" key={group}>
+              <span>ONE GUEST</span><i>✦</i>
+              <span>EVERY CELEBRATION</span><i>✦</i>
+              <span>ONE SHARED LIST</span><i>✦</i>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -238,10 +233,10 @@ export default function Home() {
               include.
             </p>
             <p>
-              Tamoe brings the conversation back to real data. Actual pax are
-              shown beside the agreed quota, so everyone can see what is
-              possible, understand the trade-offs, and take ownership of the
-              decisions instead of arguing from separate lists.
+              Tamoe brings the conversation back to shared data. The Number of
+              Pax is shown beside the agreed quota, so everyone can see what is
+              possible, understand the trade-offs, and take ownership of each
+              decision instead of arguing from separate lists.
             </p>
             <p>
               The same organized data also bridges the couple and their wedding
@@ -261,7 +256,7 @@ export default function Home() {
             </div>
             <div className="truth-quota">
               <div>
-                <span>Real guest total</span>
+                <span>Guest total</span>
                 <strong>146 <small>/ 200 pax</small></strong>
               </div>
               <span>54 pax available</span>
@@ -379,42 +374,48 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="app-tour-section" id="app-preview">
-        <div className="section-shell app-tour-heading">
-          <div>
-            <p className="eyebrow">The real Tamoe app</p>
-            <h2 className="section-title">
-              Follow the guest list
-              <span>from decision to delivery.</span>
-            </h2>
+      <section className="app-tour-section" id="app-preview" data-app-tour>
+        <div className="app-tour-sticky">
+          <div className="section-shell app-tour-heading">
+            <div>
+              <p className="eyebrow">Inside the Tamoe app</p>
+              <h2 className="section-title">
+                Follow the guest list
+                <span>from decision to delivery.</span>
+              </h2>
+            </div>
+            <p>
+              Every screen below was captured directly from Tamoe running in
+              iOS Simulator with seeded demonstration guests. No generated app
+              imagery is used.
+            </p>
           </div>
-          <p>
-            Every screen below was captured directly from Tamoe running in iOS
-            Simulator with seeded demonstration guests. No generated app
-            imagery is used.
-          </p>
-        </div>
-        <div className="app-screen-track" aria-label="Tamoe app screenshots">
-          {appScreens.map((screen, index) => (
-            <figure className="app-screen-card" data-tilt key={screen.src}>
-              <div className="app-screen-frame">
-                <Image
-                  src={screen.src}
-                  alt={`${screen.title}. Actual Tamoe app screen.`}
-                  width={1206}
-                  height={2622}
-                  sizes="(max-width: 640px) 76vw, 330px"
-                  unoptimized
-                />
-                <span className="screen-index">{String(index + 1).padStart(2, "0")}</span>
-              </div>
-              <figcaption>
-                <span className="mini-label">{screen.label}</span>
-                <h3>{screen.title}</h3>
-                <p>{screen.copy}</p>
-              </figcaption>
-            </figure>
-          ))}
+          <div
+            className="app-screen-track"
+            data-app-screen-track
+            aria-label="Tamoe app screenshots"
+          >
+            {appScreens.map((screen, index) => (
+              <figure className="app-screen-card" data-tilt key={screen.src}>
+                <div className="app-screen-frame">
+                  <Image
+                    src={screen.src}
+                    alt={`${screen.title}. Actual Tamoe app screen.`}
+                    width={1206}
+                    height={2622}
+                    sizes="(max-width: 640px) 76vw, 330px"
+                    unoptimized
+                  />
+                  <span className="screen-index">{String(index + 1).padStart(2, "0")}</span>
+                </div>
+                <figcaption>
+                  <span className="mini-label">{screen.label}</span>
+                  <h3>{screen.title}</h3>
+                  <p>{screen.copy}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -463,6 +464,21 @@ export default function Home() {
             </details>
           ))}
         </div>
+      </section>
+
+      <section className="feedback-section section-shell" id="feedback">
+        <div className="feedback-copy">
+          <p className="eyebrow">Share your thoughts</p>
+          <h2 className="section-title">
+            Help us make Tamoe
+            <span>more useful for every couple.</span>
+          </h2>
+          <p>
+            Tell our team what would make guest planning easier for you. Please
+            do not include private guest information in your message.
+          </p>
+        </div>
+        <FeedbackForm />
       </section>
 
       <section className="download-section section-shell" id="download">
