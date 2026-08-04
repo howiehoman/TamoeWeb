@@ -113,8 +113,8 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">Wedding guest planning, made gentle</p>
           <h1>
-            Every guest,
-            <span>thoughtfully planned.</span>
+            Every Guest.
+            <span>Perfectly Organized.</span>
           </h1>
           <p className="hero-lede">
             Keep every name, celebration, Number of Pax, Category, Priority
@@ -151,7 +151,7 @@ export default function Home() {
                   unoptimized
                 />
                 <strong>TAMOE</strong>
-                <span>Every guest. Every moment.</span>
+                <span>Every Guest. Perfectly Organized.</span>
                 <small>Scroll to enter the app</small>
               </div>
               <div className="app-preview-face app-preview-screen">

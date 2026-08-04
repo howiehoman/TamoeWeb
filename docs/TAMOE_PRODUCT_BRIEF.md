@@ -70,7 +70,7 @@ embedded media, or cookies, the privacy policy must be updated.
 
 ## Message hierarchy
 
-1. Every guest, thoughtfully planned.
+1. Every Guest. Perfectly Organized.
 2. One guest record across every celebration they attend.
 3. Number of Pax, category, and Priority Level stay visible.
 4. The target headcount is always easy to understand.

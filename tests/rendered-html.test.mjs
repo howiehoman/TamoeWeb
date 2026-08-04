@@ -41,10 +41,10 @@ test("server-renders the Tamoe landing page and social metadata", async () => {
   const html = await response.text();
   assert.match(
     html,
-    /<title>Tamoe \| Every guest, thoughtfully planned<\/title>/i,
+    /<title>TAMOE \| Every Guest\. Perfectly Organized\.<\/title>/,
   );
-  assert.match(html, /Every guest/);
-  assert.match(html, /thoughtfully planned/);
+  assert.match(html, /Every Guest\./);
+  assert.match(html, /Perfectly Organized\./);
   assert.match(html, /Aunt Jane/);
   assert.match(html, /tamoe-app-preview\.png/);
   assert.match(html, /Number of Pax/);
@@ -70,7 +70,7 @@ test("server-renders the Tamoe landing page and social metadata", async () => {
   assert.doesNotMatch(html, /\breal\b/i);
   assert.doesNotMatch(html, /\bcalm\w*\b/i);
   assert.doesNotMatch(html, /Made for iPhone|No account needed/);
-  assert.match(html, /https:\/\/tamoe\.example\/og\.png/);
+  assert.doesNotMatch(html, /og\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);
 });
 

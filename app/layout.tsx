@@ -1,26 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { headers } from "next/headers";
 import MotionEffects from "./MotionEffects";
 import "./globals.css";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host =
-    requestHeaders.get("x-forwarded-host") ??
-    requestHeaders.get("host") ??
-    "localhost:3000";
-  const protocol =
-    requestHeaders.get("x-forwarded-proto") ??
-    (host.startsWith("localhost") ? "http" : "https");
-  const origin = `${protocol}://${host}`;
+export function generateMetadata(): Metadata {
   const description =
     "TAMOE is a private, offline-first iPhone app for planning every wedding guest across multiple celebrations.";
 
   return {
     title: {
-      default: "TAMOE | Every guest, thoughtfully planned",
+      default: "TAMOE | Every Guest. Perfectly Organized.",
       template: "%s | TAMOE",
     },
     description,
@@ -29,23 +19,14 @@ export async function generateMetadata(): Promise<Metadata> {
       apple: "/tamoe-logo.png",
     },
     openGraph: {
-      title: "TAMOE | Every guest, thoughtfully planned",
+      title: "TAMOE | Every Guest. Perfectly Organized.",
       description,
       type: "website",
-      images: [
-        {
-          url: `${origin}/og.png`,
-          width: 1200,
-          height: 630,
-          alt: "TAMOE wedding guest-list planner",
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "TAMOE | Every guest, thoughtfully planned",
+      title: "TAMOE | Every Guest. Perfectly Organized.",
       description,
-      images: [`${origin}/og.png`],
     },
   };
 }
