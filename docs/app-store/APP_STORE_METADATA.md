@@ -8,15 +8,15 @@ TAMOE
 
 ## Subtitle
 
-Wedding Guest List Planner
+Guests, Perfectly Organized
 
 ## Promotional text
 
-Plan every guest across every celebration. Keep Number of Pax, categories, Priority Levels, and notes clear, then export a list ready to share.
+Every Guest, Perfectly Organized. Plan every guest across every celebration, keep the details clear, and export a list ready to share with your wedding vendors.
 
 ## Description
 
-Every guest, thoughtfully planned.
+Every Guest, Perfectly Organized.
 
 TAMOE is a private, local-first wedding guest-list planner for couples organizing one or more celebrations. Add each guest once, then keep the details for every celebration connected in one clear place.
 
