@@ -20,7 +20,7 @@ This tutorial assumes the app is new and has never been released.
 2. Select Identifiers, then add a new App ID.
 3. Choose App, then an explicit Bundle ID.
 4. Enter description `TAMOE`.
-5. Enter the final Bundle ID, such as `com.howiehoman.tamoe`, only if available.
+5. Enter the registered Bundle ID: `com.howiehoman.tamoeapp`.
 6. Register it.
 
 TAMOE does not currently need special capabilities such as Sign in with Apple,

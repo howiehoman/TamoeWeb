@@ -2,32 +2,16 @@
 
 Resolve every item below before creating the production App Store record.
 
-## 1. Apple Developer team and Bundle ID
+## 1. Apple Developer team and Bundle ID resolved
 
-The current app target uses:
+The final registered identity is:
 
 - Team ID: `M7YC437JCH`
-- Bundle ID: `com.hanselmeinhard.TamoeApp`
+- Bundle ID: `com.howiehoman.tamoeapp`
 
-That Bundle ID is associated with Hansel's namespace and cannot simply be
-submitted under another Apple Developer team. For Howie's Apple Developer
-Account, choose one of these paths:
-
-### Recommended path for a new, unreleased app
-
-1. Register a new explicit App ID in Howie's Apple Developer account.
-2. Recommended identifier: `com.howiehoman.tamoe`, if Apple reports that it is
-   available.
-3. In Xcode, set the TAMOE app target's Team to Howie's team.
-4. Change the app target Bundle Identifier to the newly registered identifier.
-5. Use the exact same identifier when creating the App Store Connect record.
-
-### Alternative path
-
-Submit from the Apple Developer team that already owns
-`com.hanselmeinhard.TamoeApp`, or arrange an app transfer after an initial
-release if all of Apple's transfer criteria are met. Do not create two App Store
-records for the same intended product.
+The Xcode app, unit-test, and UI-test targets now use Howie's team. Use
+`com.howiehoman.tamoeapp` when creating the App Store Connect record. Do not
+upload a build under the retired development identifier.
 
 ## 2. Seller and legal provider name
 

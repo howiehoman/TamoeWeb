@@ -5,8 +5,8 @@
 - [ ] Apple Developer Program membership is active.
 - [ ] Required App Store Connect agreements are accepted.
 - [ ] Legal seller and copyright owner names are confirmed.
-- [ ] Final Bundle ID belongs to the submitting team.
-- [ ] Xcode app target Team and Bundle ID match App Store Connect.
+- [x] Final Bundle ID `com.howiehoman.tamoeapp` belongs to the submitting team.
+- [x] Xcode app and test targets use Team ID `M7YC437JCH` and the final Bundle ID namespace.
 - [ ] EU Digital Services Act trader status is completed.
 - [ ] Distribution countries or regions are selected.
 
