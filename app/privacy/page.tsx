@@ -94,7 +94,7 @@ export default function PrivacyPage() {
             We may update this policy when TAMOE&apos;s features or practices
             change. Material changes will appear on this page with a new
             effective date. Questions can be sent to{" "}
-            <a href="mailto:support@tamoe.app">support@tamoe.app</a>.
+            <a href="mailto:tamoaeapp@gmail.com">tamoaeapp@gmail.com</a>.
           </p>
         </section>
       </article>

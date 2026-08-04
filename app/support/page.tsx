@@ -25,8 +25,8 @@ export default function SupportPage() {
               Tell us what happened, which iPhone and iOS version you use, and
               the TAMOE version shown in Settings.
             </p>
-            <a className="button button-primary" href="mailto:support@tamoe.app">
-              support@tamoe.app
+            <a className="button button-primary" href="mailto:tamoaeapp@gmail.com">
+              tamoaeapp@gmail.com
             </a>
           </article>
           <article className="support-card">

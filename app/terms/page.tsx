@@ -124,7 +124,7 @@ export default function TermsPage() {
           <p>
             We may update these Terms and will post the revised version with a
             new effective date. Questions can be sent to{" "}
-            <a href="mailto:support@tamoe.app">support@tamoe.app</a>.
+            <a href="mailto:tamoaeapp@gmail.com">tamoaeapp@gmail.com</a>.
           </p>
         </section>
       </article>

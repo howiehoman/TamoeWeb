@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 
-const supportEmail = "support@tamoe.app";
+const supportEmail = "tamoaeapp@gmail.com";
 
 export default function FeedbackForm() {
   const [isReady, setIsReady] = useState(false);

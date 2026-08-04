@@ -130,7 +130,7 @@ function Footer() {
           <div>
             <strong>Help</strong>
             <Link href="/support">Support</Link>
-            <a href="mailto:support@tamoe.app">Email us</a>
+            <a href="mailto:tamoaeapp@gmail.com">tamoaeapp@gmail.com</a>
             <Link href="/about">About</Link>
           </div>
           <div>
