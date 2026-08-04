@@ -1558,8 +1558,8 @@ img {
 
 .screen-index {
   position: absolute;
-  right: 18px;
-  bottom: 18px;
+  top: 18px;
+  left: 18px;
   display: grid;
   width: 44px;
   height: 44px;
@@ -1606,8 +1606,8 @@ img {
   }
 
   .screen-index {
-    right: 14px;
-    bottom: 14px;
+    top: 14px;
+    left: 14px;
     width: 38px;
     height: 38px;
     font-size: 10px;
@@ -2597,8 +2597,8 @@ img {
   }
 
   .screen-index {
-    right: 11px;
-    bottom: 11px;
+    top: 11px;
+    left: 11px;
     width: 34px;
     height: 34px;
     font-size: 9px;

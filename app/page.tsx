@@ -337,7 +337,7 @@ export default function Home() {
             </article>
             <article className="event-card event-card-accent" data-tilt>
               <p className="event-kicker"><span className="event-dot" /> Reception</p>
-              <div><span>Guest</span><strong>Included</strong></div>
+              <div><span>Number of Pax</span><strong>2 pax</strong></div>
               <div><span>Category</span><strong>Family Friends</strong></div>
               <div><span>Priority Level</span><strong>Must Invite</strong></div>
               <div><span>Notes</span><strong>Specific to Aunt Jane</strong></div>
