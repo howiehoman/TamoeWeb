@@ -122,8 +122,9 @@ Required routes:
 - Email support through a `mailto:` link
 - Accessible semantic HTML, responsive layout, SEO metadata, and fast assets
 
-Before App Store release, confirm the support email, legal entity, governing
-jurisdiction, final effective dates, and App Store URL. Legal copy requires
+Before App Store release, confirm the legal entity, governing jurisdiction, and
+final App Store URL. The support email is `tamoaeapp@gmail.com`, and the current
+Privacy Policy and Terms are effective August 4, 2026. Legal copy requires
 professional review.
 
 ## Team

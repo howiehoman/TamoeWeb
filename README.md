@@ -52,11 +52,15 @@ pnpm test
 
 ## Information still needed before publishing
 
-- Official support email
 - Team, studio, or legal entity name
 - Governing jurisdiction for the terms
-- Privacy-policy and terms effective dates
 - Final App Store URL
 - Whether the public site will be English-only or bilingual
+
+Confirmed release information:
+
+- Support email: `tamoaeapp@gmail.com`
+- Privacy Policy and Terms effective date: August 4, 2026
+- Public submission package: `docs/app-store/`
 
 Legal text should be reviewed by a qualified professional before release.

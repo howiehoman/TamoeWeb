@@ -51,7 +51,7 @@ test("server-renders the Tamoe landing page and social metadata", async () => {
   assert.match(html, /Categories for every circle/);
   assert.match(html, /Priority Level makes decisions clearer/);
   assert.match(html, /Notes for one specific guest/);
-  assert.match(html, /Inside the Tamoe app/);
+  assert.match(html, /Inside the TAMOE app/);
   assert.match(html, /01-all-events\.png/);
   assert.match(html, /07-export-options\.png/);
   assert.match(html, /No generated app imagery is used/);
@@ -64,8 +64,8 @@ test("server-renders the Tamoe landing page and social metadata", async () => {
   assert.match(html, /Excel/);
   assert.match(html, /Numbers/);
   assert.match(html, /Private by design/);
-  assert.match(html, /Help us make Tamoe/);
-  assert.match(html, /support@tamoe\.app/);
+  assert.match(html, /Help us make TAMOE/);
+  assert.match(html, /tamoaeapp@gmail\.com/);
   assert.match(html, /data-app-tour/);
   assert.doesNotMatch(html, /\breal\b/i);
   assert.doesNotMatch(html, /\bcalm\w*\b/i);
@@ -87,9 +87,17 @@ test("renders public privacy and terms pages", async () => {
     termsResponse.text(),
   ]);
   assert.match(privacy, /Your guest list is personal/);
-  assert.match(privacy, /Voice guest search/);
+  assert.match(privacy, /Optional voice guest search/);
+  assert.match(privacy, /August 4, 2026/);
+  assert.match(privacy, /Vercel/);
+  assert.match(privacy, /tamoaeapp@gmail\.com/);
+  assert.doesNotMatch(privacy, /Pre-release draft/i);
   assert.match(terms, /Intellectual property and copyright/);
   assert.match(terms, /Limitation of liability/);
+  assert.match(terms, /Apple App Store terms/);
+  assert.match(terms, /August 4, 2026/);
+  assert.match(terms, /tamoaeapp@gmail\.com/);
+  assert.doesNotMatch(terms, /must be inserted|identified here|Pre-release/i);
 });
 
 test("removes starter UI and keeps motion accessible", async () => {
