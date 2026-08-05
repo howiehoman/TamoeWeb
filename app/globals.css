@@ -1579,8 +1579,6 @@ img {
 }
 
 .app-screen-card figcaption {
-  display: grid;
-  align-content: start;
   padding: 24px 10px 0;
 }
 
@@ -1590,7 +1588,6 @@ img {
 
 .app-screen-card figcaption h3 {
   margin: 8px 0 10px;
-  min-height: 3lh;
   color: var(--canvas);
   font: 500 24px/1.22 var(--serif);
 }
