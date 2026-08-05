@@ -123,10 +123,13 @@ test("removes starter UI and keeps motion accessible", async () => {
   assert.match(motion, /surfaceTurn/);
   assert.match(motion, /--app-tour-x/);
   assert.match(motion, /tourProgress/);
+  assert.doesNotMatch(motion, /\.app-screen-card/);
   assert.match(styles, /transform-style:\s*preserve-3d/);
   assert.match(styles, /-webkit-backface-visibility:\s*hidden/);
   assert.match(styles, /\.app-tour-sticky/);
   assert.match(styles, /var\(--app-tour-x/);
+  assert.match(styles, /\.app-screen-track\s*\{[^}]*align-items:\s*flex-start/s);
+  assert.match(styles, /\.app-screen-card figcaption h3\s*\{[^}]*min-height:\s*3lh/s);
   assert.match(styles, /\.marquee-group\s*\{[^}]*min-width:\s*100vw/s);
   assert.match(styles, /\.marquee-group\s*\{[^}]*justify-content:\s*space-around/s);
   assert.match(styles, /@media \(prefers-reduced-motion: reduce\)/);

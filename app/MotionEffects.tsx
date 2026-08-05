@@ -13,7 +13,7 @@ export default function MotionEffects() {
 
     const revealTargets = Array.from(
       document.querySelectorAll<HTMLElement>(
-        ".section-intro, .story-grid > *, .purpose-copy > *, .shared-truth-card, .team-heading > *, .team-member, .guest-journey, .feature-card, .app-tour-heading > *, .app-screen-card, .privacy-card > *, .faq-heading, .faq-list details, .feedback-copy > *, .feedback-form, .download-card > *, .content-hero > *, .content-body > *, .support-card, .about-card",
+        ".section-intro, .story-grid > *, .purpose-copy > *, .shared-truth-card, .team-heading > *, .team-member, .guest-journey, .feature-card, .app-tour-heading > *, .privacy-card > *, .faq-heading, .faq-list details, .feedback-copy > *, .feedback-form, .download-card > *, .content-hero > *, .content-body > *, .support-card, .about-card",
       ),
     );
 
