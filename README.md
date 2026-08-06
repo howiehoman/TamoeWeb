@@ -33,6 +33,27 @@ The landing page includes a scroll-linked 3D Tamoe phone reveal, depth-based
 cards, kinetic section reveals, cursor tilt, a scroll-progress indicator, and a
 reduced-motion fallback.
 
+## Brand assets
+
+- `public/tamoe-wordmark-source.png` is the supplied 2048-pixel master artwork.
+- `public/tamoe-wordmark.png` is its tightly cropped transparent web asset.
+- `public/og.png` is the social preview built from that wordmark and an actual
+  TAMOE simulator screen.
+
+Regenerate the derived brand assets from the repository root with:
+
+```bash
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift \
+  -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk \
+  -module-cache-path /private/tmp/tamoe-wordmark-swift-cache \
+  scripts/prepare_wordmark.swift public/tamoe-wordmark-source.png public/tamoe-wordmark.png
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift \
+  -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk \
+  -module-cache-path /private/tmp/tamoe-og-swift-cache \
+  scripts/generate_og.swift
+```
+
 ## Product source of truth
 
 Read [docs/TAMOE_PRODUCT_BRIEF.md](docs/TAMOE_PRODUCT_BRIEF.md) before writing

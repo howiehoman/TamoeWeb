@@ -22,11 +22,20 @@ export function generateMetadata(): Metadata {
       title: "TAMOE | Every Guest. Perfectly Organized.",
       description,
       type: "website",
+      images: [
+        {
+          url: "/og.png",
+          width: 1200,
+          height: 630,
+          alt: "TAMOE. Every Guest. Perfectly Organized.",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: "TAMOE | Every Guest. Perfectly Organized.",
       description,
+      images: ["/og.png"],
     },
   };
 }
@@ -46,13 +55,21 @@ function Header() {
       <div className="nav-shell">
         <Link className="brand" href="/" aria-label="TAMOE home">
           <Image
+            className="brand-icon"
             src="/tamoe-logo.png"
             alt=""
             width={72}
             height={72}
             unoptimized
           />
-          <span>TAMOE</span>
+          <Image
+            className="brand-wordmark"
+            src="/tamoe-wordmark.png"
+            alt="TAMOE"
+            width={1298}
+            height={298}
+            unoptimized
+          />
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navLinks.map((link) => (
@@ -90,13 +107,21 @@ function Footer() {
         <div className="footer-brand">
           <Link className="brand" href="/">
             <Image
+              className="brand-icon"
               src="/tamoe-logo.png"
               alt=""
               width={72}
               height={72}
               unoptimized
             />
-            <span>TAMOE</span>
+            <Image
+              className="brand-wordmark"
+              src="/tamoe-wordmark.png"
+              alt="TAMOE"
+              width={1298}
+              height={298}
+              unoptimized
+            />
           </Link>
           <p>Every name, celebration, and invitation decision in one shared guest list.</p>
         </div>

@@ -144,13 +144,21 @@ export default function Home() {
               <div className="app-preview-face app-preview-brand">
                 <div className="phone-front-shimmer" />
                 <Image
+                  className="app-preview-icon"
                   src="/tamoe-logo.png"
                   alt=""
                   width={188}
                   height={188}
                   unoptimized
                 />
-                <strong>TAMOE</strong>
+                <Image
+                  className="app-preview-wordmark"
+                  src="/tamoe-wordmark.png"
+                  alt="TAMOE"
+                  width={1298}
+                  height={298}
+                  unoptimized
+                />
                 <span>Every Guest. Perfectly Organized.</span>
                 <small>Scroll to enter the app</small>
               </div>
@@ -486,8 +494,22 @@ export default function Home() {
       <section className="download-section section-shell" id="download">
         <div className="download-card">
           <div className="download-wordmark">
-            <Image src="/tamoe-logo.png" alt="" width={68} height={68} unoptimized />
-            <span>TAMOE</span>
+            <Image
+              className="download-icon"
+              src="/tamoe-logo.png"
+              alt=""
+              width={68}
+              height={68}
+              unoptimized
+            />
+            <Image
+              className="download-wordmark-image"
+              src="/tamoe-wordmark.png"
+              alt="TAMOE"
+              width={1298}
+              height={298}
+              unoptimized
+            />
           </div>
           <p className="eyebrow">Coming soon to the App Store</p>
           <h2>

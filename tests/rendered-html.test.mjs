@@ -47,6 +47,7 @@ test("server-renders the Tamoe landing page and social metadata", async () => {
   assert.match(html, /Perfectly Organized\./);
   assert.match(html, /Aunt Jane/);
   assert.match(html, /tamoe-app-preview\.png/);
+  assert.match(html, /tamoe-wordmark\.png/);
   assert.match(html, /Number of Pax/);
   assert.match(html, /Categories for every circle/);
   assert.match(html, /Priority Level makes decisions clearer/);
@@ -70,7 +71,7 @@ test("server-renders the Tamoe landing page and social metadata", async () => {
   assert.doesNotMatch(html, /\breal\b/i);
   assert.doesNotMatch(html, /\bcalm\w*\b/i);
   assert.doesNotMatch(html, /Made for iPhone|No account needed/);
-  assert.doesNotMatch(html, /og\.png/);
+  assert.match(html, /og\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);
 });
 
